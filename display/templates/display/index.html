@@ -9,26 +9,28 @@
         <link rel="shortcut icon" href="{% static 'imgs/favicon.ico' %}">
     </head>
     <body>
-      <div id="sidebar" class="col-md-3">
+      <div id="sidebar" class="flex-column">
         <div id="summary">
             <img id="logo" src="{% static 'imgs/logo.jpg' %}">
             <ul id="contact">
               <li>
+                <label>@gravy-jones-locker</label>
                 <a href="https://github.com/gravy-jones-locker" target="_blank">
                   <img alt="@gravy-jones-locker" title="@gravy-jones-locker" src="{% static 'imgs/github.png' %}">
                 </a>
               </li>
               <li>
+                <label>Edward W. (Upwork)</label>
                 <a href="https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1" target="_blank">
                   <img alt="link to upwork profile" title="Upwork Profile" src="{% static 'imgs/upwork.png' %}">
                 </a>
               </li>
             </ul>
         </div>
-        <nav id="navvy" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+        <nav id="navvy" class="navbar navbar-light flex-column align-items-stretch p-3">
           <nav class="nav nav-pills flex-column">
-            <a class="navbar-brand" href="#">About</a>
-            <a class="navbar-brand" href="#">Experience & Projects:</a>
+            <a class="navbar-brand" href="#">Profile</a>
+            <a class="navbar-brand" href="#">Experience & Projects</a>
             <a class="nav-link" href="#item-1">Image Processing</a>
             <nav class="nav nav-pills flex-column">
               <a class="nav-link ms-3" href="#item-1-1">Defect Detection in Solar Cells</a>
@@ -44,10 +46,23 @@
           </nav>
         </nav>
       </div>
-      <div id="content" class="rounded bg-light col-md-9" data-bs-spy="scroll" data-bs-target="#navvy" data-bs-offset="0" tabindex="0">
-        <div class="row section">
-          <h4 id="about" class="section-text">Gravy</h4>
-          <p>...</p>
+      <div id="header" class="rightbar">
+        <div id="banner">
+          <h1>Gravy Jones</h1>
+          <h3 style="font-weight: 300;">Freelance Developer</h3>
+        </div>
+        <h2 class="subheading">
+          Profile
+        </h2>
+      </div>
+      <div id="content" class="rounded rightbar" data-bs-spy="scroll" data-bs-target="#navvy" data-bs-offset="50" tabindex="0">
+        <div class="section">
+          <h4>Who is he?</h4>
+          <p>
+            Gravy is an experienced backend developer with expert proficiency in the native Python3 libraries
+            and related technologies. He specialises in computer vision, web/RESTful frameworks (e.g. Django, Pyramid) and
+            data mining.
+          </p>
         </div>
         <div class="row section">
           <h4 id="item-1" class="section-text">Image Processing 1</h4>

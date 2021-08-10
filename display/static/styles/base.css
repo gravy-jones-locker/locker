@@ -5,16 +5,38 @@ body {
 }
 
 #content {
+    max-height: calc(70% + 5px);
     float: right;
-    padding: 20 20 20 20;
+    padding: 0 20 20 20;
     overflow-y: scroll;
     height: 100%;
     position: relative;
-    min-height: 660px;
+    min-height: 480px;
+    color: rgb(240, 240, 240);
+    width: 75%;
+}
+
+#sidebar {
+    width: 25%;
+}
+
+label {
+    align-self: baseline;
+    font-size: small;
+    color: white;
 }
 
 .section {
     height: 105%;
+    padding: 10 30 50 0;
+}
+
+#banner {
+    width: 100%;
+    text-align: right;
+    float: right;
+    color:rgb(240, 240, 240);
+    padding: 10 0 47 0;
 }
 
 #sidebar {
@@ -25,6 +47,12 @@ body {
     margin-top: -5px;
 }
 
+#header {
+    width: 75%;
+    position:relative;
+    float: right;
+}
+
 #logo {
     width: 50%;
     height: 100%;
@@ -32,10 +60,34 @@ body {
     float: left;
 }
 
+h4 {
+    padding: 5;
+}
+
+.subheading {
+    border-bottom-style: dashed;
+    color:rgb(240, 240, 240);
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    float: left;
+    width: 100%;
+}
+
+p {
+    font-style: oblique;
+    padding: 5;
+}
+
+label {
+    color: rgb(240, 240, 240);
+    font-size: x-small;
+    font-style: italic;
+}
+
 #summary {
     height: 30%;
     width: 100%;
-    padding: 10 5 10 0;
+    padding: 10 0 10 0;
     position: relative;
 }
 
@@ -45,28 +97,39 @@ body {
     bottom: 0;
 }
 
+.rightbar {
+    padding-left: 10px;
+}
+
 ul {
+    margin-top: -2;
     list-style-type: none;
 }
 
 #contact > * > * > img {
-    margin-bottom: 12;
-    width: 32px;
+    padding: 2 0 12 15;
+    width: 40px;
+    border-radius: .1rem;
 }
 
 .bg-light {
     --bs-bg-opacity: 0.9;
+    background-color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 500;
 }
 
 #navvy {
     height: calc(70% + 5px);
     overflow: scroll;
-    border-bottom-left-radius: .25rem;
-    border-bottom-right-radius: .25rem;
-    background: linear-gradient(0deg, rgba(210, 210, 210, 0.9) 0%, 5%, rgba(248, 249, 250, 0.9));
+    border-radius: .25rem;
+    background: rgb(240, 240, 240);
     overflow-wrap: break-word;
     overflow-x: hidden;
-    min-height: 470px;
+    min-height: 480px;
 }
 
 #navvy::-webkit-scrollbar {
@@ -78,7 +141,11 @@ ul {
   }
 
 .nav-link {
-    color: black;
+    color: rgb(20, 20, 20);
+}
+
+.nav-link:hover {
+    color: rgb(1, 148, 1);
 }
 .navbar-brand {
     padding-bottom: 8px;
@@ -94,7 +161,11 @@ ul {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: black;
+    border-style: solid;
+    border-radius: .1rem;
+    background-color:rgb(240, 240, 240);
     font-weight: 600;
+}
+.nav-pills a.nav-link.active {
+    color:rgb(1, 148, 1);
 }
