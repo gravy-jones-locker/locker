@@ -1,0 +1,100 @@
+body {
+    background: black;
+    position: relative;
+    padding: 35 35 35 35;
+}
+
+#content {
+    float: right;
+    padding: 20 20 20 20;
+    overflow-y: scroll;
+    height: 100%;
+    position: relative;
+    min-height: 660px;
+}
+
+.section {
+    height: 105%;
+}
+
+#sidebar {
+    float: left;
+    padding-right: 25px;
+    height: 100%;
+    margin-bottom: 5px;
+    margin-top: -5px;
+}
+
+#logo {
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: .25rem;
+    float: left;
+}
+
+#summary {
+    height: 30%;
+    width: 100%;
+    padding: 10 5 10 0;
+    position: relative;
+}
+
+#contact {
+    padding-top: 2px;
+    float: right;
+    bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#contact > * > * > img {
+    margin-bottom: 12;
+    width: 32px;
+}
+
+.bg-light {
+    --bs-bg-opacity: 0.9;
+}
+
+#navvy {
+    height: calc(70% + 5px);
+    overflow: scroll;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    background: linear-gradient(0deg, rgba(210, 210, 210, 0.9) 0%, 5%, rgba(248, 249, 250, 0.9));
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    min-height: 470px;
+}
+
+#navvy::-webkit-scrollbar {
+    display: none;
+  }
+
+#content::-webkit-scrollbar {
+    display: none;
+  }
+
+.nav-link {
+    color: black;
+}
+.navbar-brand {
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    border-bottom: solid;
+    padding-left: 3;
+    margin-right: 3px;
+    border-radius: 0;
+}
+
+.nav-link {
+    margin: 1;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: black;
+    font-weight: 600;
+}
