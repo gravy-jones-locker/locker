@@ -26,7 +26,7 @@ SECRET_KEY = '+sl2$e0zl1y%^z8co_l*tj8jfrh363rexq&&gqv@zm-pa(l*4y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['159.65.55.166', 'localhost']
+ALLOWED_HOSTS = ['159.65.55.166', 'localhost','gravyjoneslocker.uk']
 
 
 # Application definition
