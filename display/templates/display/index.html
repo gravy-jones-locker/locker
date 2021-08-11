@@ -6,6 +6,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/arrow.css' %}">
         <link rel="shortcut icon" href="{% static 'imgs/favicon.ico' %}">
     </head>
     <body>
@@ -62,16 +63,58 @@
       </div>
       <div id="content" class="rounded rightbar scroll-container" data-bs-spy="scroll" data-bs-target="#navvy" data-bs-offset="50" tabindex="0">
         <div class="section">
-          <h4>Who is he?</h4>
-          <p>
-            Gravy is an experienced backend developer with expert proficiency in the native Python3 libraries
-            and related technologies. He specialises in computer vision, web/RESTful frameworks (e.g. Django, Pyramid) and
-            data mining.
-          </p>
+          <div class="section-content">
+            <div class="synopsis">
+              <p>
+                An experienced backend developer with expert proficiency in the native Python3 libraries
+                and related technologies, specialising in computer vision, web/RESTful frameworks and
+                data mining.
+              </p>
+            </div>
+            <div class="text left">
+              <h5>Frequently Used Technologies</h5>
+              <ul style="padding-left: 50; padding-top: 15;">
+                <li>
+                  Web Frameworks: Django, Flask, SQLite, Pyramid, NGINX, Apache
+                </li>
+                <li>
+                  Web Frontend: Bootstrap, CSS, HTML, JavaScript
+                </li>
+                <li>
+                  RESTful API Integration: Django REST Framework, Google Ads, OAuth2, Azure AD
+                </li>
+                <li>
+                  Computer Vision: OpenCV, Scikit-Image, SimpleITK, numpy, imutils
+                </li>
+                <li>
+                  Cloud Computing: AWS EC2, AWS S3, AWS Elastic IP, Digital Ocean
+                </li>
+              </ul>
+            </div>
+            <div class="text right" style="width: 55%;">
+              <h5>Contact for Quotes & More Info</h5>
+              <p>see open repository contributions and code samples <a href="https://github.com/gravy-jones-locker" target="_blank">here</a> /
+                <br /> see past jobs and client testimonials <a href="https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1" target="_blank">here</a> /
+                <br /> email me <a href="mailto:gravy@gravyjoneslocker.uk" target="_blank">here</a> /
+              </p>
+            </div>
+          </div>
+          <div class="footer bounce">
+            <div style="position: relative;">
+              <div class="downArrow">
+                <img width="40" height="40" alt="" src="{% static 'imgs/arrow.png' %}" />
+              </div>
+            </div>
+            <span>
+              Scroll down for code samples/project case-studies
+            </span>
+          </div>
         </div>
         <div class="row section">
-          <h4 id="item-1" class="section-text top">Image Processing 1</h4>
-          <p>...</p>
+          <div class="synopsis">
+            <h4 id="item-1" class="section-text top">Image Processing 1</h4>
+            <p>...</p>
+          </div>
         </div>
         <div class="row section">
           <h5 id="item-1-1" class="top">Item 1-1</h5>
