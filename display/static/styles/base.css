@@ -1,7 +1,7 @@
 body {
     background: black;
     position: relative;
-    padding: 30 45 35 45;
+    padding: 30 65 35 65;
     overscroll-behavior: none;
 }
 
@@ -34,8 +34,10 @@ label {
 }
 
 .section {
-    height: 110%;
-    padding: 10 30 50 0;
+    overflow-x: hidden;
+    height: 100%;
+    padding: 0 0 50 0;
+    margin-top: 20;
     scroll-snap-align: center;
 }
 
@@ -49,6 +51,7 @@ a:hover {
 
 .section-content {
     position: relative;
+    padding: 15 0 0 0;
 }
 
 #banner {
@@ -104,14 +107,11 @@ h4 {
     left: -10
 }
 
-.synopsis {
-    padding: 15 0 0 0;
-}
-
 .synopsis > p {
     -webkit-transform: skew(-8deg);
     font-size: 1.1rem;
     font-weight: 460;
+    padding-left: 5;
 }
 
 #summary {
@@ -160,34 +160,35 @@ h1 {
     overflow-wrap: break-word;
     overflow-x: hidden;
     min-height: 480px;
+    margin-top: 5px;
 }
 
 h5 {
     color:rgb(1, 210, 1);
-    padding-top: 10;
-    padding-left: 0;
+    padding: 10 0 10 0;
 }
 
 .text {
-    padding-bottom: 15;
+    padding-bottom: 30;
 }
 
 .footer {
     position: absolute;
-    bottom: 2;
+    bottom: 0;
     width: 100%;
 }
 
-.footer > span {
+.footer > div > a > span {
     float: left;
-    padding-left: 10px;
+    padding-left: 15px;
     -webkit-transform: skew(-8deg);
 }
 
 .right {
-    float:right;
-    padding-right: 80px;
-    position: relative;
+    bottom: 0;
+    right: -20;
+    padding-right: 100px;
+    position: fixed;
     text-align: right;
 }
 
