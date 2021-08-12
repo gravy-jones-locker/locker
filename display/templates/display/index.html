@@ -34,7 +34,7 @@
         </div>
         <nav id="navvy" class="navbar navbar-light flex-column align-items-stretch p-3">
           <nav class="nav nav-pills flex-column">
-            <a class="navbar-brand nav-link" href="#synopsis">Profile</a>
+            <a class="navbar-brand nav-link" href="#Profile">Profile</a>
             <a class="navbar-brand" href="#">Experience & Projects</a>
             <a class="nav-link" href="#item-1">Computer Vision</a>
             <nav class="nav nav-pills flex-column">
@@ -66,7 +66,7 @@
         <div class="section">
           <div class="section-content">
             <div class="synopsis">
-              <p id="synopsis">
+              <p id="Profile">
                 An experienced backend developer with expert proficiency in the native Python3 libraries
                 and related technologies, specialising in computer vision, web/RESTful frameworks and
                 data mining.
@@ -111,12 +111,6 @@
             </div>
           </div>
         </div>
-        <div class="section">
-          <div class="synopsis">
-            <h4 id="item-1" class="section-text top">Image Processing 1</h4>
-            <p>...</p>
-          </div>
-        </div>
         <div class="row section">
           <h5 id="item-1-1" class="top">Item 1-1</h5>
           <p>...</p>
@@ -150,7 +144,7 @@
         var firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
 firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
   scrollSpy = bootstrap.ScrollSpy.getInstance(document.getElementById('content'));
-  activeEl = scrollSpy._activeTarget;
+  activeEl = scrollSpy._activeTarget.slice(1);
   console.log(activeEl);
   document.getElementById('subheading').children[0].textContent = activeEl;
   

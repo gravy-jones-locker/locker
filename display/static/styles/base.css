@@ -74,7 +74,7 @@ a:hover {
 }
 
 #header {
-    height: 203px;
+    height: 210px;
     width: 75%;
     position:relative;
     float: right;
@@ -99,12 +99,12 @@ h4 {
     float: left;
     height: 100%;
     position: relative;
-    width: 20%;
+    width: 30%;
 }
 
 .subheading > * {
     position: absolute;
-    bottom: -4;
+    bottom: 2;
     left: -10;
 }
 
