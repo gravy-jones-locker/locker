@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="{% static 'styles/base.css' %}">
         <link rel="stylesheet" href="{% static 'styles/arrow.css' %}">
         <link rel="shortcut icon" href="{% static 'imgs/favicon.ico' %}">
@@ -33,7 +34,7 @@
         </div>
         <nav id="navvy" class="navbar navbar-light flex-column align-items-stretch p-3">
           <nav class="nav nav-pills flex-column">
-            <a class="navbar-brand" href="#">Profile</a>
+            <a class="navbar-brand nav-link" href="#synopsis">Profile</a>
             <a class="navbar-brand" href="#">Experience & Projects</a>
             <a class="nav-link" href="#item-1">Computer Vision</a>
             <nav class="nav nav-pills flex-column">
@@ -55,7 +56,7 @@
           <h1>Senior Backend Developer</h1>
           <h3 style="font-weight: 300;">Computer Vision | Web Frameworks | Data Mining</h3>
         </div>
-        <div class="subheading">
+        <div id="subheading" class="subheading">
           <h2>
             Profile
           </h2>
@@ -65,7 +66,7 @@
         <div class="section">
           <div class="section-content">
             <div class="synopsis">
-              <p>
+              <p id="synopsis">
                 An experienced backend developer with expert proficiency in the native Python3 libraries
                 and related technologies, specialising in computer vision, web/RESTful frameworks and
                 data mining.
@@ -145,5 +146,16 @@
           <p>...</p>
         </div>
       </div>
+      <script>
+        var firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
+firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
+  scrollSpy = bootstrap.ScrollSpy.getInstance(document.getElementById('content'));
+  activeEl = scrollSpy._activeTarget;
+  console.log(activeEl);
+  document.getElementById('subheading').children[0].textContent = activeEl;
+  
+})
+
+      </script>
     </body>
 </html>

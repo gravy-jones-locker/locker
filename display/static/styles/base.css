@@ -99,16 +99,17 @@ h4 {
     float: left;
     height: 100%;
     position: relative;
+    width: 20%;
 }
 
 .subheading > * {
     position: absolute;
     bottom: -4;
-    left: -10
+    left: -10;
 }
 
 .synopsis > p {
-    -webkit-transform: skew(-8deg);
+    -webkit-transform: skew(-6deg);
     font-size: 1.1rem;
     font-weight: 460;
     padding-left: 5;
@@ -221,11 +222,16 @@ h5 {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    border-style: solid;
-    border-radius: .1rem;
     background-color:rgb(240, 240, 240);
     font-weight: 600;
 }
 .nav-pills a.nav-link.active {
     color:rgb(1, 148, 1);
+}
+
+.nav-pills .nav-link.navbar-brand {
+    background: 0 0;
+    border-bottom: solid;
+    border-color: black;
+    border-radius: inherit;
 }
