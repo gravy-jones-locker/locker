@@ -56,9 +56,10 @@ a:hover {
 
 #banner {
     text-align: right;
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     color:rgb(240, 240, 240);
-    padding: 0 0 30 0;
 }
 
 #banner > * {
@@ -96,10 +97,10 @@ h4 {
 
 .subheading {
     color:rgb(240, 240, 240);
-    float: left;
-    height: 100%;
-    position: relative;
-    width: 30%;
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    left: 8;
 }
 
 .subheading > * {
@@ -108,11 +109,8 @@ h4 {
     left: -10;
 }
 
-.synopsis > p {
-    -webkit-transform: skew(-6deg);
-    font-size: 1.1rem;
-    font-weight: 460;
-    padding-left: 5;
+.synopsis {
+    padding-top: 5;
 }
 
 #summary {
@@ -191,6 +189,8 @@ h5 {
     padding-right: 100px;
     position: fixed;
     text-align: right;
+    background-color: black;
+    z-index: 5;
 }
 
 #navvy::-webkit-scrollbar {
