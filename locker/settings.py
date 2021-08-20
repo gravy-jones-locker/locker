@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+from genericpath import isdir
 from pathlib import Path
 import os
 
@@ -30,7 +31,7 @@ ALLOWED_HOSTS = ['159.65.55.166', 'localhost','gravyjoneslocker.uk']
 
 
 # Application definition
-
+CUSTOM_APPS = [x for x in os.listdir() if os.path.isdir(x)]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,8 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'display.apps.DisplayConfig'
+    'display.apps.DisplayConfig',
 ]
+for x in CUSTOM_APPS:  # Add all demo apps
+    if not x.startswith('demo'):
+        continue
+    INSTALLED_APPS.append(f'{x}.apps.mainconfig')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -120,4 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'display', 'static')
+STATIC_FILES_DIRS = [
+    os.path.join(BASE_DIR, x, 'static') for x in CUSTOM_APPS
+]

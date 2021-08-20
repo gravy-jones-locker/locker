@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('display.urls'))
-]
+    path('site/', include('display.urls')),
+] 
+for x in os.listdir():  # Add demo url configs
+    if not os.path.isdir(x) or not x.startswith('demo'):
+        continue
+    urlpatterns.append(path(f'{x}/', include(f'{x}.urls')))
