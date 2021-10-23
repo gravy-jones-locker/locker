@@ -1,23 +1,22 @@
 body {
-    background: black;
+    background: rgb(5, 5, 5);
     position: relative;
-    padding: 30 65 35 65;
+    padding: 40 65 40 65;
     overscroll-behavior: none;
+    max-width: 1600px;
+    margin: 0 auto;
+    font-family: georgia, sans-serif;
 }
 
 #content {
-    max-height: calc(70% + 5px);
     float: right;
-    padding: 0 20 20 20;
-    height: 100vh;
+    padding: 0 20 20 0;
+    height: calc(100vh - 240px);
     position: relative;
     min-height: 480px;
     color: rgb(240, 240, 240);
-    width: 75%;
-}
-
-#sidebar {
-    width: 25%;
+    width: calc(100% - 395px);
+    margin-top: 10px;
 }
 
 label {
@@ -36,8 +35,7 @@ label {
 .section {
     overflow-x: hidden;
     height: 100%;
-    padding: 0 0 50 0;
-    margin-top: 20;
+    padding: 0 0 50 15;
     scroll-snap-align: center;
 }
 
@@ -57,7 +55,7 @@ a:hover {
 #banner {
     text-align: right;
     position: absolute;
-    top: 0;
+    top: 28;
     right: 0;
     color:rgb(240, 240, 240);
 }
@@ -68,24 +66,24 @@ a:hover {
 
 #sidebar {
     float: left;
-    padding-right: 25px;
+    padding-right: 30px;
     height: 100%;
+    width: 395px;
     margin-bottom: 5px;
     margin-top: -5px;
 }
 
 #header {
-    height: 210px;
-    width: 75%;
+    height: 165px;
+    width: calc(100% - 405px);
     position:relative;
     float: right;
-    border-bottom-style: dashed;
     color: rgb(240, 240, 240);
 }
 
 #logo {
-    width: 50%;
-    height: 100%;
+    width: 215;
+    height: 250;
     border-top-left-radius: .25rem;
     float: left;
     padding-left: 2;
@@ -93,6 +91,15 @@ a:hover {
 
 h4 {
     padding: 5;
+}
+
+#subheading-text {
+    color:rgb(1, 210, 1);
+    font-size: large;
+}
+
+#subsubheading-text {
+    font-size: 2.8rem;
 }
 
 .subheading {
@@ -103,25 +110,19 @@ h4 {
     left: 8;
 }
 
-.subheading > * {
-    position: absolute;
-    bottom: 2;
-    left: -10;
-}
-
 .synopsis {
     padding-top: 5;
 }
 
 #summary {
-    height: 210px;
+    height: 260px;
     width: 100%;
     padding: 10 0 10 0;
     position: relative;
 }
 
 #contact {
-    padding-top: 2px;
+    padding-top: 3px;
     float: right;
     bottom: 0;
 }
@@ -152,14 +153,12 @@ h1 {
 }
 
 #navvy {
-    height: calc(70% + 5px);
     overflow: scroll;
-    border-radius: .25rem;
-    background: rgb(240, 240, 240);
+    background: rgb(245, 245, 245);
     overflow-wrap: break-word;
     overflow-x: hidden;
     min-height: 480px;
-    margin-top: 5px;
+    margin-top: 30px;
 }
 
 h5 {
@@ -184,8 +183,8 @@ h5 {
 }
 
 .right {
-    bottom: 0;
-    right: -20;
+    bottom: 10;
+    right: -35;
     padding-right: 100px;
     position: fixed;
     text-align: right;
@@ -213,17 +212,13 @@ h5 {
     margin-bottom: 12px;
     border-bottom: solid;
     padding-left: 3;
+    margin-left: 13px;
     margin-right: 3px;
     border-radius: 0;
 }
 
-.nav-link {
-    margin: 1;
-}
-
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color:rgb(240, 240, 240);
-    font-weight: 600;
 }
 .nav-pills a.nav-link.active {
     color:rgb(1, 148, 1);
@@ -235,3 +230,14 @@ h5 {
     border-color: black;
     border-radius: inherit;
 }
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ #content::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+#content {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+} 

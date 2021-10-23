@@ -34,117 +34,100 @@
         </div>
         <nav id="navvy" class="navbar navbar-light flex-column align-items-stretch p-3">
           <nav class="nav nav-pills flex-column">
-            <a class="navbar-brand nav-link" href="#Profile">Profile</a>
-            <a class="navbar-brand" href="#">Case Studies & Projects</a>
+            <a class="navbar-brand nav-link" href="#Profile">Summary</a>
+            <a class="navbar-brand" href="#">Experience</a>
             <a class="nav-link" href="#item-1">Computer Vision</a>
             <nav class="nav nav-pills flex-column">
-              <a class="nav-link ms-3" href="#item-1-1">Defect Detection in Solar Cells</a>
-              <a class="nav-link ms-3" href="#item-1-2">Building Outlines from LIDAR</a>
-              <a class="nav-link ms-3" href="#item-1-3">ImGravy</a>
+              <a class="nav-link ms-3" href="#item-1-1">// Defect Detection in Solar Cells</a>
+              <a class="nav-link ms-3" href="#item-1-2">// Building Outlines from LIDAR</a>
+              <a class="nav-link ms-3" href="#item-1-3">// ImGravy</a>
             </nav>
             <a class="nav-link" href="#item-2">Web Frameworks</a>
             <a class="nav-link" href="#item-3">Data Mining</a>
             <nav class="nav nav-pills flex-column">
-              <a class="nav-link ms-3" href="#item-3-1">Resume Parsing</a>
-              <a class="nav-link ms-3" href="#item-3-2">PDFGravy</a>
+              <a class="nav-link ms-3" href="#item-3-1">// Resume Parsing</a>
+              <a class="nav-link ms-3" href="#item-3-2">// PDFGravy</a>
             </nav>
           </nav>
         </nav>
       </div>
       <div id="header" class="rightbar">
-        <div id="banner">
-          <h1>Senior Backend Developer</h1>
-          <h3 style="font-weight: 300;">Computer Vision | Web Frameworks | Data Mining</h3>
-        </div>
         <div id="subheading" class="subheading">
-          <h2>
-            Profile
-          </h2>
+          <h2 id="subheading-text"></h2>
+          <h1 id="subsubheading-text">Profile</h1>
         </div>
       </div>
-      <div id="content" class="rounded rightbar scroll-container" data-bs-spy="scroll" data-bs-target="#navvy" data-bs-offset="50" tabindex="0">
-        <div class="section">
-          <div class="section-content">
-            <p id="Profile" class="synopsis" alt="Profile">
-              An experienced backend developer with expert proficiency in the native Python3 libraries
-              and related technologies, specialising in computer vision, web/RESTful frameworks and
-              data mining.
-            </p>
-            <div class="text left">
-              <h5>Frequently Used Technologies</h5>
-              <ul style="padding-left: 50;">
-                <li>
-                  Web Frameworks: Django, Flask, SQLite, Pyramid, NGINX, Apache
-                </li>
-                <li>
-                  Web Frontend: Bootstrap, CSS, HTML, JavaScript
-                </li>
-                <li>
-                  RESTful API Integration: Django REST Framework, Google Ads, OAuth2, Azure AD
-                </li>
-                <li>
-                  Computer Vision: OpenCV, Scikit-Image, SimpleITK, numpy, imutils
-                </li>
-                <li>
-                  Cloud Computing: AWS EC2, AWS S3, AWS Elastic IP, Digital Ocean
-                </li>
-              </ul>
-            </div>
-            <div class="text right">
-              <h5>Contact for Quotes & More Info</h5>
-              <p>see open repository contributions and code samples <a href="https://github.com/gravy-jones-locker" target="_blank">here</a> /
-                <br /> see past jobs and client testimonials <a href="https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1" target="_blank">here</a> /
-                <br /> email me <a href="mailto:gravy@gravyjoneslocker.uk" target="_blank">here</a> /
-              </p>
-            </div>
-          </div>
-          <div class="footer bounce">
-            <div style="position: relative;">
-              <a href="#item-1-1" style="text-decoration: none;">
-              <div class="downArrow">
-                <img width="40" height="40" alt="" src="{% static 'imgs/arrow.png' %}" />
-              </div>
-              <span>scroll down for code samples/project case-studies</span>
-              </a>
-            </div>
+      <div id="content" class="rounded rightbar scroll-container" data-bs-spy="scroll" data-bs-offset="50" data-bs-target="#navvy" tabindex="0">
+        <div class="section" style="margin-top: 10px;">
+          <p id="Profile" class="synopsis" alt="Summary // Senior Software Developer">
+            An experienced backend developer with expert proficiency in the native Python3 libraries
+            and related technologies, specialising in computer vision, web/RESTful frameworks and
+            data mining.
+          </p>
+          <div class="text left">
+            <h5>Frequently Used Technologies</h5>
+            <ul style="padding-left: 50;">
+              <li>
+                Web Frameworks: Django, Flask, SQLite, Pyramid, NGINX, Apache
+              </li>
+              <li>
+                Web Frontend: Bootstrap, CSS, HTML, JavaScript
+              </li>
+              <li>
+                RESTful API Integration: Django REST Framework, Google Ads, OAuth2, Azure AD
+              </li>
+              <li>
+                Computer Vision: OpenCV, Scikit-Image, SimpleITK, numpy, imutils
+              </li>
+              <li>
+                Cloud Computing: AWS EC2, AWS S3, AWS Elastic IP, Digital Ocean
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="row section">
-          <p id="item-1-1" class="synopsis" alt="Case Study: Defect Detection in Solar Cells">
+        <div class="section">
+          <p id="item-1-1" class="synopsis" alt="Computer Vision // Defect Detection in Solar Cells">
             A package developed for a Shanghai-based firm which splits electroluminescent images of solar panels
             into their constituent cells and preprocesses those cells for ML defect detection.
           </p>
         </div>
-        <div class="row section">
-          <p id="item-1-2" class="synopsis" alt="Case Study: Building Outlines from LIDAR">
+        <div class="section">
+          <p id="item-1-2" class="synopsis" alt="Computer Vision // Building Outlines from LIDAR">
             A package which segments composite LIDAR-derived images of urban areas into individual buildings,
             with rule-based classification and segment post-processing for increased accuracy.
           </p>
         </div>
-        <div class="row section">
-          <p id="item-1-3" class="synopsis" alt="Project: ImGravy">
+        <div class="section">
+          <p id="item-1-3" class="synopsis" alt="Computer Vision // ImGravy">
             Pythonic bindings for common computer vision tasks built as a utility package for computer vision
             engineers - freely available on Github and through the Python Package Index (pip).
           </p>
         </div>
-        <div class="row section">
-          <p id="item-2" class="synopsis" alt="Case Study: Web Frameworks">
+        <div class="section">
+          <p id="item-2" class="synopsis" alt="Web Frameworks">
             Experience with a variety of different web frameworks (Django, Flask, Pyramid) building responsive
             web applications (like this one!) alongside complex backend logic.
           </p>
         </div>
-        <div class="row section">
-          <p id="item-3-1" class="synopsis" alt="Case Study: Resume Parsing">
+        <div class="section">
+          <p id="item-3-1" class="synopsis" alt="Data Mining // Resume Parsing">
             Extracting unstructured data from candidate resumes using positional, formatting and contextual information
             to facilitate the resume improvement services offered by a South Korean startup.
           </p>
         </div>
-        <div class="row section">
-          <p id="item-3-2" class="synopsis" alt="Project: PDFGravy">
+        <div class="section">
+          <p id="item-3-2" class="synopsis" alt="Data Mining // PDFGravy">
             A comprehensive PDF manipulation package for Python which incorporates table extraction, header segmentation and
             further complex operations for document parsing.
           </p>
         </div>
+      <div class="text right">
+        <h5>Quotes & More Info</h5>
+        <p>see open repository contributions and code samples <a href="https://github.com/gravy-jones-locker" target="_blank">here</a> /
+          <br /> see past jobs and client testimonials <a href="https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1" target="_blank">here</a> /
+          <br /> email me <a href="mailto:gravy@gravyjoneslocker.uk" target="_blank">here</a> /
+        </p>
+      </div>
       </div>
       <script>
         var firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
@@ -152,9 +135,15 @@ firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
   scrollSpy = bootstrap.ScrollSpy.getInstance(document.getElementById('content'));
   activeEl = scrollSpy._activeTarget.slice(1);
   console.log(activeEl);
-  title = document.getElementById(activeEl).getAttribute('alt')
-  document.getElementById('subheading').children[0].textContent = title;
-  
+  subtitle = document.getElementById(activeEl).getAttribute('alt')
+  title = ''
+  if (subtitle.includes('//')) {
+    title, parts = subtitle.split('//');
+    title = parts[0];
+    subtitle = '// ' + parts[1];
+  }
+  document.getElementById('subheading-text').textContent = title;
+  document.getElementById('subsubheading-text').textContent = subtitle;
 })
 
       </script>
