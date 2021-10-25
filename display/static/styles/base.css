@@ -1,21 +1,37 @@
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    visibility: hidden;
+}
+
 body {
     background: rgb(5, 5, 5);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#container {
     position: relative;
-    padding: 40 65 40 65;
+    padding: 60 0 40 105;
     overscroll-behavior: none;
-    max-width: 1600px;
+    height: 100%;
     margin: 0 auto;
     font-family: georgia, sans-serif;
+    transition-duration: 0.2s;
 }
 
 #content {
     float: right;
-    padding: 0 20 20 0;
-    height: calc(100vh - 240px);
+    padding: 0 20 20 10;
+    height: calc(100vh - 200px);
     position: relative;
     min-height: 480px;
     color: rgb(240, 240, 240);
-    width: calc(100% - 395px);
+    width: 100%;
     margin-top: 10px;
 }
 
@@ -23,6 +39,14 @@ label {
     align-self: baseline;
     font-size: x-small;
     color: white;
+}
+
+.feedback {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 570px;
+    text-align: right;
 }
 
 .scroll-container {
@@ -35,7 +59,7 @@ label {
 .section {
     overflow-x: hidden;
     height: 100%;
-    padding: 0 0 50 15;
+    padding: 0 0 0 0;
     scroll-snap-align: center;
 }
 
@@ -52,30 +76,19 @@ a:hover {
     padding: 15 0 0 0;
 }
 
-#banner {
-    text-align: right;
-    position: absolute;
-    top: 28;
-    right: 0;
-    color:rgb(240, 240, 240);
-}
-
-#banner > * {
-    padding: 0 0 15 0;
-}
-
 #sidebar {
     float: left;
-    padding-right: 30px;
     height: 100%;
-    width: 395px;
+    width: 430px;
     margin-bottom: 5px;
     margin-top: -5px;
+    padding-right: 60px;
 }
 
 #header {
-    height: 165px;
-    width: calc(100% - 405px);
+    color:rgb(240, 240, 240);
+    height: 100px;
+    width: 100%;
     position:relative;
     float: right;
     color: rgb(240, 240, 240);
@@ -87,31 +100,32 @@ a:hover {
     border-top-left-radius: .25rem;
     float: left;
     padding-left: 2;
+    background: rgb(20, 20, 20, 0.7);
 }
 
-h4 {
-    padding: 5;
+.main {
+    padding-bottom: 0 !important;
+    position: relative;
+    height: calc(100vh - 350px);
+}
+
+.main > ul {
+    padding-left: 18;
+    list-style-type: '-  ';
 }
 
 #subheading-text {
     color:rgb(1, 210, 1);
-    font-size: large;
+    font-size: 1.25rem;
 }
 
 #subsubheading-text {
-    font-size: 2.8rem;
-}
-
-.subheading {
-    color:rgb(240, 240, 240);
-    position: absolute;
-    width: 80%;
-    bottom: 0;
-    left: 8;
+    font-size: 3.2rem;
 }
 
 .synopsis {
-    padding-top: 5;
+    padding: 0 0 30 0; 
+    font-size: 1.15rem;
 }
 
 #summary {
@@ -152,18 +166,38 @@ h1 {
     font-weight: 500;
 }
 
+#wrapper {
+    padding-top: 40;
+    height: calc(100vh - 60px);
+    width: calc(100% - 430px);
+    position:relative;
+    float: right;
+    padding-left: 35px;
+    padding-right: 25px;
+    background: rgb(20, 20, 20, 0.7);
+}
+
 #navvy {
-    overflow: scroll;
-    background: rgb(245, 245, 245);
+    background: rgb(20, 20, 20, 0.7);
     overflow-wrap: break-word;
     overflow-x: hidden;
-    min-height: 480px;
+    height: calc(100% - 245px);
     margin-top: 30px;
+    font-size: 1.1rem;
 }
 
 h5 {
     color:rgb(1, 210, 1);
-    padding: 10 0 10 0;
+}
+
+h4 {
+    color:rgb(1, 210, 1);
+    padding: 15 0 15 0;
+}
+
+h3 {
+    color:rgb(1, 210, 1);
+    padding: 20 0 20 0;
 }
 
 .text {
@@ -182,14 +216,13 @@ h5 {
     -webkit-transform: skew(-8deg);
 }
 
-.right {
-    bottom: 10;
-    right: -35;
+#low-section {
+    right: -50;
     padding-right: 100px;
     position: fixed;
     text-align: right;
-    background-color: black;
     z-index: 5;
+    transition-duration: 0.2s;
 }
 
 #navvy::-webkit-scrollbar {
@@ -201,12 +234,13 @@ h5 {
   }
 
 .nav-link {
-    color: rgb(20, 20, 20);
+    color: rgb(240, 240, 240);
 }
 
 .nav-link:hover {
-    color: rgb(1, 148, 1);
+    color: rgb(1, 210, 1);
 }
+
 .navbar-brand {
     padding-bottom: 8px;
     margin-bottom: 12px;
@@ -217,17 +251,26 @@ h5 {
     border-radius: 0;
 }
 
+.navbar-light .navbar-brand {
+    color: rgb(240, 240, 240);
+}
+
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color:rgb(240, 240, 240);
+    background-color:rgb(20, 20, 20, 0);
 }
 .nav-pills a.nav-link.active {
-    color:rgb(1, 148, 1);
+    color:rgb(1, 210, 1);
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color:rgb(1, 210, 1);
+    border-color: rgb(240, 240, 240);
 }
 
 .nav-pills .nav-link.navbar-brand {
     background: 0 0;
     border-bottom: solid;
-    border-color: black;
+    border-color: rgb(240, 240, 240);
     border-radius: inherit;
 }
 
@@ -241,3 +284,8 @@ h5 {
 -ms-overflow-style: none;  /* IE and Edge */
 scrollbar-width: none;  /* Firefox */
 } 
+
+#contact-details {
+    transition-duration: 0.2s;
+    margin-top: hidden;
+}
