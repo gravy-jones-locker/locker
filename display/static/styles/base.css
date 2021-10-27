@@ -174,11 +174,11 @@ h1 {
     float: right;
     padding-left: 35px;
     padding-right: 25px;
-    background: rgb(20, 20, 20, 0.7);
+    background: rgb(50, 50, 120, 0.7);
 }
 
 #navvy {
-    background: rgb(20, 20, 20, 0.7);
+    background: rgb(50, 50, 120, 0.7);
     overflow-wrap: break-word;
     overflow-x: hidden;
     height: calc(100% - 245px);
