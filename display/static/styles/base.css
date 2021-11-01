@@ -1,7 +1,7 @@
 .background {
     position: absolute;
-    top: 0;
-    left: 0;
+    margin-top: -7px;
+    margin-left: -10px; 
     object-fit: cover;
     min-width: 100%;
     min-height: 100%;
@@ -12,6 +12,7 @@ body {
     background: rgb(5, 5, 5);
     overflow-y: hidden;
     overflow-x: hidden;
+    font-size: 1.15rem;
 }
 
 #container {
@@ -44,7 +45,7 @@ label {
 .feedback {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 5;
     width: 570px;
     text-align: right;
 }
@@ -68,7 +69,7 @@ a {
 }
 
 a:hover {
-    color:rgb(1, 210, 1);
+    color:rgb(10, 230, 10);
 }
 
 .section-content {
@@ -100,7 +101,7 @@ a:hover {
     border-top-left-radius: .25rem;
     float: left;
     padding-left: 2;
-    background: rgb(20, 20, 20, 0.7);
+    background: rgb(20, 20, 20, 0.75);
 }
 
 .main {
@@ -109,13 +110,23 @@ a:hover {
     height: calc(100vh - 350px);
 }
 
-.main > ul {
+.main > * > ul {
     padding-left: 18;
     list-style-type: '-  ';
 }
 
+.technical > ul {
+    list-style-type: '';
+    padding-left: 0;
+    padding-right: 100px;
+}
+
+.technical > ul > li {
+    margin-bottom: 20px;
+}
+
 #subheading-text {
-    color:rgb(1, 210, 1);
+    color:rgb(10, 230, 10);
     font-size: 1.25rem;
 }
 
@@ -125,7 +136,7 @@ a:hover {
 
 .synopsis {
     padding: 0 0 30 0; 
-    font-size: 1.15rem;
+    font-size: 1.23rem;
 }
 
 #summary {
@@ -139,6 +150,11 @@ a:hover {
     padding-top: 3px;
     float: right;
     bottom: 0;
+}
+
+strong {
+    font-weight: normal;
+    color:rgb(10, 230, 10);
 }
 
 .rightbar {
@@ -173,12 +189,10 @@ h1 {
     position:relative;
     float: right;
     padding-left: 35px;
-    padding-right: 25px;
-    background: rgb(50, 50, 120, 0.7);
+    padding-right: 20px;
 }
 
 #navvy {
-    background: rgb(50, 50, 120, 0.7);
     overflow-wrap: break-word;
     overflow-x: hidden;
     height: calc(100% - 245px);
@@ -187,16 +201,15 @@ h1 {
 }
 
 h5 {
-    color:rgb(1, 210, 1);
+    color:rgb(10, 230, 10);
 }
 
 h4 {
-    color:rgb(1, 210, 1);
+    color:rgb(10, 230, 10);
     padding: 15 0 15 0;
 }
 
 h3 {
-    color:rgb(1, 210, 1);
     padding: 20 0 20 0;
 }
 
@@ -217,8 +230,8 @@ h3 {
 }
 
 #low-section {
-    right: -50;
-    padding-right: 100px;
+    right: 0;
+    padding-right: 40px;
     position: fixed;
     text-align: right;
     z-index: 5;
@@ -233,12 +246,29 @@ h3 {
     display: none;
   }
 
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    background: lightgray;
+    border-radius: 0.1rem;
+    border-style: none;
+    background: rgb(30, 30, 30, 0.85);
+    padding: 2 5 2 5;
+    font-size: 0.9rem;
+    position: relative;
+    margin-right: 2px;
+    top: -1px;
+}
+
+.code > * {
+    color: fuchsia;
+}
+
 .nav-link {
     color: rgb(240, 240, 240);
 }
 
 .nav-link:hover {
-    color: rgb(1, 210, 1);
+    color: rgb(10, 230, 10);
 }
 
 .navbar-brand {
@@ -259,11 +289,11 @@ h3 {
     background-color:rgb(20, 20, 20, 0);
 }
 .nav-pills a.nav-link.active {
-    color:rgb(1, 210, 1);
+    color:rgb(10, 230, 10);
 }
 
 .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
-    color:rgb(1, 210, 1);
+    color:rgb(10, 230, 10);
     border-color: rgb(240, 240, 240);
 }
 
