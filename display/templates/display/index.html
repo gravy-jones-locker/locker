@@ -13,6 +13,8 @@
     <body>
       <img id="background-panel" class="background" src="{% static 'imgs/panel.jpg' %}"></img>
       <img id="background-lidar" class="background" src="{% static 'imgs/lidar.jpeg' %}"></img>
+      <img id="background-trading" class="background" src="{% static 'imgs/tradinglite.jpg' %}"></img>      
+      <img id="background-eu" class="background" src="{% static 'imgs/eupdfs.png' %}"></img>      
       <div id="container">
         <div id="sidebar" class="flex-column">
           <div id="summary">
@@ -39,13 +41,16 @@
             <nav class="nav nav-pills flex-column">
               <a class="navbar-brand nav-link" href="#Profile">Summary</a>
               <a class="navbar-brand" href="#">Portfolio</a>
-              <a class="nav-link" href="#item-1">Computer Vision</a>
+              <a class="nav-link" id="vision-link" href="#item-1">Computer Vision</a>
               <nav class="nav nav-pills flex-column">
-                <a class="nav-link ms-2" href="#item-1-1">// Defect Detection in Solar Cells</a>
-                <a class="nav-link ms-2" href="#item-1-2">// Building Outlines from LIDAR</a>
-                <a class="nav-link ms-2" href="#item-1-3">// ImGravy</a>
+                <a class="nav-link ms-2" href="#item-1-1">// Solar Cell Defect Preprocessing</a>
+                <a class="nav-link ms-2" href="#item-1-2">// LIDAR Building Detection</a>
               </nav>
-              <a class="nav-link" href="#item-2">Web Frameworks</a>
+              <a class="nav-link" id="frameworks-link" href="#item-2">Web Frameworks</a>
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link ms-2" href="#item-2-1">// Trading Indicator Alert System</a>
+                <a class="nav-link ms-2" href="#item-2-2">// EU-Pdf Portal</a>
+              </nav>
               <a class="nav-link" href="#item-3">Data Mining</a>
               <nav class="nav nav-pills flex-column">
                 <a class="nav-link ms-2" href="#item-3-1">// Resume Parsing</a>
@@ -94,10 +99,17 @@
                     as well as a portfolio of past projects. Scroll down to see more. <strong>GJ</strong>
                   </p>
                 </div>
+                <div class="feedback">
+                  <h5>Quotes & More Info</h5>
+                  <div id="contact-details">see open repository contributions and code samples <a href="https://github.com/gravy-jones-locker" target="_blank">here</a> /
+                    <br /> see past jobs and client testimonials <a href="https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1" target="_blank">here</a> /
+                    <br /> email me <a href="mailto:gravy@gravyjoneslocker.uk" target="_blank">here</a> /
+                  </div>
+                </div>
               </div>
             </div>
             <div class="section">
-              <p id="item-1-1" class="synopsis" alt="Computer Vision // Defect Detection in Solar Cells">
+              <p id="item-1-1" class="synopsis" alt="Computer Vision // Solar Cell Defect Preprocessing">
                 A package developed for a Shanghai-based firm which splits electroluminescent images of solar panels
                 into their constituent cells and preprocesses those cells for ML defect detection.
               </p>
@@ -106,20 +118,24 @@
                   <h3 style="color: white;">Technical Notes</h3>
                   <ul>
                     <li>
-                      <strong>Maximizes use of vectorization</strong> to make sure
-                      high-resolution image matrices are processed as efficiently as possible in a very time-sensitive context
+                      Extensive use of <strong>vectorization</strong> optimizes processing of
+                      high-resolution image matrices in a highly time-sensitive context
                     </li>
                     <li>
-                      Incorporates a <strong>bespoke registration module</strong> based on medical imaging technology and workflows to 
-                      accurately align low-information, sparsely featured cell images
+                      A <strong>bespoke registration module</strong> leverages medical imaging techniques and workflows 
+                      to accurately align low-information, sparsely featured cell images
+                      
                     </li>
                     <li>
-                      Base 'Image' class spun off into a set of bindings for simplified and Pythonic image processing pipelines - c.f. <strong><a>ImGravy</a></strong> or run <span class="code"><strong>$ pip install imgravy</strong></span>
+                      A sequence of <strong>non-linear convolutions</strong> exposes otherwise hidden defects (e.g. hairline cracks)
+                    </li>
+                    <li>
+                      Base 'Image' class spun off into a set of bindings for <strong>simplified and Pythonic image processing pipelines</strong> - <a href="https://github.com/gravy-jones-locker/imgravy">ImGravy</a></span>
                     </li>
                   </ul>
                 </div>
                 <div class="feedback">
-                  <h5>Maxime - Avalon ST</h5>
+                  <h5>Avalon ST</h5>
                   <div>
                     "[Gravy] managed to solve problems that others couldn't. Proactive, he gets what to do quickly, overall a pleasure to work with [Gravy], highly recommended."
                   </div>
@@ -127,16 +143,35 @@
               </div>
             </div>
             <div class="section">
-              <p id="item-1-2" class="synopsis" alt="Computer Vision // Building Outlines from LIDAR">
+              <p id="item-1-2" class="synopsis" alt="Computer Vision // LIDAR Building Detection">
                 A package which segments composite LIDAR-derived images of urban areas into individual buildings,
                 with rule-based classification and segment post-processing for increased accuracy.
               </p>
               <div class="main">
-                <h3>Technical Details</h3>
+                <h3>Technical Notes</h3>
+                <div class="technical">
+                  <ul>
+                    <li>
+                      Thresholding <strong>height-normalized point clouds</strong> to a given 'first-storey' value derives rough building
+                      outlines
+                    </li>
+                    <li>
+                      Basic morphological operations (erosion; dilation) consolidate initial areas of interest using
+                       <strong>custom kernels for enhanced precision</strong>
+                    </li>
+                    <li>
+                      An iterative process of <strong>Hierarchical Rectangular Polygon Fitting</strong> <a href="https://www.researchgate.net/profile/Hossein-Arefi/publication/225002968_From_LIDAR_Point_Clouds_to_3D_Building_Models/links/5819e9b208ae30a2c01c8c17/From-LIDAR-Point-Clouds-to-3D-Building-Models.pdf">(Arefi 2009)</a> extracts shapes with roughly orthogonal edges
+                    </li>
+                    <li>
+                      Subsequent <strong>post-processing algorithms</strong> refine the output of HRPF to achieve the required level of accuracy
+                      and remove processing artefacts
+                    </li>
+                  </ul>
+                </div>
                 <p>
                 </p>
                 <div class="feedback">
-                  <h5>Taylor - Lendlease</h5>
+                  <h5>Lend Direct</h5>
                   <div>
                     "Very professional work from [Gravy], he met the specification perfectly and delivered within the set time budget with great communication throughout."
                   </div>
@@ -144,16 +179,32 @@
               </div>
             </div>
             <div class="section">
-              <p id="item-1-3" class="synopsis" alt="Computer Vision // ImGravy">
+              <p id="item-2-1" class="synopsis" alt="Computer Vision | Web Frameworks // Trading Indicator Alert System">
                 Pythonic bindings for common computer vision tasks built as a utility package for computer vision
                 engineers - freely available on Github and through the Python Package Index (pip).
               </p>
+              <div class="main">
+                <div class="feedback">
+                  <h5>Private Client</h5>
+                  <div>
+                    "[Gravy] did fantastic work. I would recommend him to anyone."
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="section">
-              <p id="item-2" class="synopsis" alt="Web Frameworks">
+              <p id="item-2-2" class="synopsis" alt="Web Frameworks // EU-Pdf Portal">
                 Experience with a variety of different web frameworks (Django, Flask, Pyramid) building responsive
                 web applications (like this one!) alongside complex backend logic.
               </p>
+              <div class="main">
+                <div class="feedback">
+                  <h5>Porter Novelli</h5>
+                  <div>
+                    "[Gravy] helped me build a unique and interesting tool ... understood the brief quickly, and helped innovate on the initial idea ... responsive and quick as we tweaked and improved."
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="section">
               <p id="item-3-1" class="synopsis" alt="Data Mining // Resume Parsing">
@@ -167,13 +218,6 @@
                 further complex operations for document parsing.
               </p>
             </div>
-          <div class="text" id="low-section">
-            <h5>Quotes & More Info</h5>
-            <p id="contact-details">see open repository contributions and code samples <a href="https://github.com/gravy-jones-locker" target="_blank">here</a> /
-              <br /> see past jobs and client testimonials <a href="https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1" target="_blank">here</a> /
-              <br /> email me <a href="mailto:gravy@gravyjoneslocker.uk" target="_blank">here</a> /
-            </p>
-          </div>
         </div>
       </div>
     </div>
@@ -182,7 +226,6 @@ var firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
 firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
   scrollSpy = bootstrap.ScrollSpy.getInstance(document.getElementById('content'));
   activeEl = scrollSpy._activeTarget.slice(1);
-  console.log(activeEl);
   subtitle = document.getElementById(activeEl).getAttribute('alt')
   title = ''
   if (subtitle.includes('//')) {
@@ -190,32 +233,44 @@ firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
     title = parts[0];
     subtitle = '// ' + parts[1];
   }
-  if (!title.includes('Summary')) {
-    document.getElementById('low-section').style.bottom = '-160';
-  }
-  else {
-    document.getElementById('low-section').style.bottom = '-15'
-  }
-  function hideBackgrounds () {
+function hideBackgrounds () {
+    document.getElementById('logo').style.background = "rgb(20, 20, 20, 0.75)";
     for (const elem of document.getElementsByClassName('background')) {
-      console.log(elem);
       elem.style.visibility = 'hidden';
     };
   };
   hideBackgrounds();
+  if (!title.includes('Vision')) {
+    document.getElementById('vision-link').style.color = "rgb(240, 240, 240)";
+  }
+  else {
+    document.getElementById('vision-link').style.color = "rgb(10, 230, 10)";
+  }
   if (subtitle.includes('Defect')) {
     document.getElementById('background-panel').style.visibility = "visible";
-    document.getElementById('wrapper').style.background = "rgb(20, 20, 100, 0.9)";
-    document.getElementById('navvy').style.background = "rgb(20, 20, 100, 0.9)";
+    document.getElementById('wrapper').style.background = "rgb(35, 35, 120, 0.92)";
+    document.getElementById('navvy').style.background = "rgb(35, 35, 120, 0.92)";
   }
   else if (subtitle.includes('LIDAR')) {
     document.getElementById('background-lidar').style.visibility = "visible";
-    document.getElementById('wrapper').style.background = "rgb(60, 60, 60, 0.9)";
-    document.getElementById('navvy').style.background = "rgb(60, 60, 60, 0.9)";
+    document.getElementById('wrapper').style.background = "rgb(60, 60, 60, 0.95)";
+    document.getElementById('navvy').style.background = "rgb(60, 60, 60, 0.95)";
+  }
+  else if (subtitle.includes('Trading')) {
+    document.getElementById('vision-link').style.color = "rgb(10, 230, 10)";
+    document.getElementById('background-trading').style.visibility = "visible";
+    document.getElementById('wrapper').style.background = "rgb(10, 5, 25, 0.85)";
+    document.getElementById('navvy').style.background = "rgb(10, 5, 25, 0.85)";  
+  }
+  else if (subtitle.includes('EU-Pdf')) {
+    document.getElementById('logo').style.background = "rgb(0, 0, 0, 0.85)";
+    document.getElementById('background-eu').style.visibility = "visible";
+    document.getElementById('wrapper').style.background = "rgb(10, 10, 10, 0.85)";
+    document.getElementById('navvy').style.background = "rgb(10, 10, 10, 0.85)";  
   }
   else {
-    document.getElementById('wrapper').style.background = "rgb(15, 15, 15, 0.9)";
-    document.getElementById('navvy').style.background = "rgb(15, 15, 15, 0.9)";
+    document.getElementById('wrapper').style.background = "rgb(30, 30, 30)";
+    document.getElementById('navvy').style.background = "rgb(30, 30, 30)";
   }
   document.getElementById('subheading-text').textContent = title;
   document.getElementById('subsubheading-text').textContent = subtitle;

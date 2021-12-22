@@ -3,8 +3,8 @@
     margin-top: -7px;
     margin-left: -10px; 
     object-fit: cover;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: calc(100% + 10px);
+    min-height: calc(100% + 10px);
     visibility: hidden;
 }
 
@@ -12,7 +12,7 @@ body {
     background: rgb(5, 5, 5);
     overflow-y: hidden;
     overflow-x: hidden;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
 }
 
 #container {
@@ -46,8 +46,9 @@ label {
     position: absolute;
     right: 0;
     bottom: 5;
-    width: 570px;
+    width: 600px;
     text-align: right;
+    min-height: 85px;
 }
 
 .scroll-container {
@@ -72,6 +73,10 @@ a:hover {
     color:rgb(10, 230, 10);
 }
 
+.technical a {
+    text-decoration-line: underline;
+}
+
 .section-content {
     position: relative;
     padding: 15 0 0 0;
@@ -80,7 +85,7 @@ a:hover {
 #sidebar {
     float: left;
     height: 100%;
-    width: 430px;
+    width: 425px;
     margin-bottom: 5px;
     margin-top: -5px;
     padding-right: 60px;
@@ -116,8 +121,8 @@ a:hover {
 }
 
 .technical > ul {
-    list-style-type: '';
-    padding-left: 0;
+    list-style-type: ' ';
+    padding-left: 15px;
     padding-right: 100px;
 }
 
@@ -185,7 +190,7 @@ h1 {
 #wrapper {
     padding-top: 40;
     height: calc(100vh - 60px);
-    width: calc(100% - 430px);
+    width: calc(100% - 425px);
     position:relative;
     float: right;
     padding-left: 35px;
