@@ -43,12 +43,12 @@
               <a class="navbar-brand" href="#">Portfolio</a>
               <a class="nav-link" id="vision-link" href="#item-1">Computer Vision</a>
               <nav class="nav nav-pills flex-column">
-                <a class="nav-link ms-2" href="#item-1-1">// Solar Cell Defect Preprocessing</a>
-                <a class="nav-link ms-2" href="#item-1-2">// LIDAR Building Detection</a>
+                <a class="nav-link ms-2" href="#item-1-1">// Solar Cell Defect Detection</a>
+                <a class="nav-link ms-2" href="#item-1-2">// LIDAR Building Segmentation</a>
               </nav>
               <a class="nav-link" id="frameworks-link" href="#item-2">Web Frameworks</a>
               <nav class="nav nav-pills flex-column">
-                <a class="nav-link ms-2" href="#item-2-1">// Trading Indicator Alert System</a>
+                <a class="nav-link ms-2" href="#item-2-1">// Trading Alert System</a>
                 <a class="nav-link ms-2" href="#item-2-2">// EU-Pdf Portal</a>
               </nav>
               <a class="nav-link" href="#item-3">Data Mining</a>
@@ -70,8 +70,8 @@
             <div class="section" style="margin-top: 10px;">
               <p id="Profile" class="synopsis" alt="Summary // Freelance Developer - Python+">
                 An experienced backend developer with expert proficiency in the native Python3 libraries
-                and related technologies, specialising in computer vision, web frameworks and
-                data mining.
+                and related technologies. specialising in computer vision, web frameworks and
+                data mining
               </p>
               <div class="main">
                 <div>
@@ -96,7 +96,7 @@
                   <br />
                   <p>
                     This website includes contact details and links to relevant personal resources
-                    as well as a portfolio of past projects. Scroll down to see more. <strong>GJ</strong>
+                    as well as a portfolio of past projects. <strong>GJ</strong>
                   </p>
                 </div>
                 <div class="feedback">
@@ -109,9 +109,8 @@
               </div>
             </div>
             <div class="section">
-              <p id="item-1-1" class="synopsis" alt="Computer Vision // Solar Cell Defect Preprocessing">
-                A package developed for a Shanghai-based firm which splits electroluminescent images of solar panels
-                into their constituent cells and preprocesses those cells for ML defect detection.
+              <p id="item-1-1" class="synopsis" alt="Computer Vision // Solar Cell Defect Detection">
+                Workflow package for an ML defect detection pipeline. Manages splitting, preprocessing and recomposition of electroluminescent images from the solar panel manufacturing process
               </p>
               <div class="text main">
                 <div class="technical">
@@ -130,7 +129,7 @@
                       A sequence of <strong>non-linear convolutions</strong> exposes otherwise hidden defects (e.g. hairline cracks)
                     </li>
                     <li>
-                      Base 'Image' class spun off into a set of bindings for <strong>simplified and Pythonic image processing pipelines</strong> - <a href="https://github.com/gravy-jones-locker/imgravy">ImGravy</a></span>
+                      Base Image class spun off into bindings for <strong>simplified and Pythonic image processing pipelines</strong> - <a href="https://github.com/gravy-jones-locker/imgravy">ImGravy</a></span>
                     </li>
                   </ul>
                 </div>
@@ -143,9 +142,8 @@
               </div>
             </div>
             <div class="section">
-              <p id="item-1-2" class="synopsis" alt="Computer Vision // LIDAR Building Detection">
-                A package which segments composite LIDAR-derived images of urban areas into individual buildings,
-                with rule-based classification and segment post-processing for increased accuracy.
+              <p id="item-1-2" class="synopsis" alt="Computer Vision // LIDAR Building Segmentation">
+                High-accuracy segmentation of LIDAR arrays into individual buildings. Generates visual and coordinate output from raw input data
               </p>
               <div class="main">
                 <h3>Technical Notes</h3>
@@ -160,7 +158,7 @@
                        <strong>custom kernels for enhanced precision</strong>
                     </li>
                     <li>
-                      An iterative process of <strong>Hierarchical Rectangular Polygon Fitting</strong> <a href="https://www.researchgate.net/profile/Hossein-Arefi/publication/225002968_From_LIDAR_Point_Clouds_to_3D_Building_Models/links/5819e9b208ae30a2c01c8c17/From-LIDAR-Point-Clouds-to-3D-Building-Models.pdf">(Arefi 2009)</a> extracts shapes with roughly orthogonal edges
+                      An iterative process of <strong>Hierarchical Rectangular Polygon Fitting <a href="https://www.researchgate.net/profile/Hossein-Arefi/publication/225002968_From_LIDAR_Point_Clouds_to_3D_Building_Models/links/5819e9b208ae30a2c01c8c17/From-LIDAR-Point-Clouds-to-3D-Building-Models.pdf">(Arefi 2009)</a></strong> extracts shapes with roughly orthogonal edges
                     </li>
                     <li>
                       Subsequent <strong>post-processing algorithms</strong> refine the output of HRPF to achieve the required level of accuracy
@@ -179,11 +177,26 @@
               </div>
             </div>
             <div class="section">
-              <p id="item-2-1" class="synopsis" alt="Computer Vision | Web Frameworks // Trading Indicator Alert System">
-                Pythonic bindings for common computer vision tasks built as a utility package for computer vision
-                engineers - freely available on Github and through the Python Package Index (pip).
-              </p>
+              <p id="item-2-1" class="synopsis" alt="Computer Vision | Web Frameworks // Trading Alert System">
+                Always-on solution for monitoring key trading indicators. Captures and parses chart images for asset/exchange-specific indicators, specified through a configurable frontend</p>
               <div class="main">
+                <h3>Technical Notes</h3>
+                <div class="technical">
+                  <ul>
+                    <li>
+                      Trading charts rendered in virtual memory using <strong>Xvfb display server</strong> with no need to maintain a physical display
+                    </li>
+                    <li>
+                      Alert criteria (exchange; asset; relevant thresholds) configured through a <strong>Jinja templated dashboard</strong> and wired to backend logic using the <strong>Django web framework</strong>
+                    </li>
+                    <li>
+                      Chart indicators detected using color masking in the <strong>HSV colorspace</strong> and minimum pixel thresholds
+                    </li>
+                    <li>
+                      Alert notifications sent with the <strong>smtplib native Python3 library</strong> to a configurable recipient email address 
+                    </li>
+                  </ul>
+                </div>
                 <div class="feedback">
                   <h5>Private Client</h5>
                   <div>

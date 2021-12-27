@@ -122,12 +122,12 @@ a:hover {
 
 .technical > ul {
     list-style-type: ' ';
-    padding-left: 15px;
     padding-right: 100px;
+    margin-left: -15px;
 }
 
 .technical > ul > li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #subheading-text {
@@ -141,7 +141,7 @@ a:hover {
 
 .synopsis {
     padding: 0 0 30 0; 
-    font-size: 1.23rem;
+    font-size: 1.26rem;
 }
 
 #summary {
