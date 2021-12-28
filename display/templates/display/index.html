@@ -15,6 +15,7 @@
       <img id="background-lidar" class="background" src="{% static 'imgs/lidar.jpeg' %}"></img>
       <img id="background-trading" class="background" src="{% static 'imgs/tradinglite.jpg' %}"></img>      
       <img id="background-eu" class="background" src="{% static 'imgs/eupdfs.png' %}"></img>      
+      <img id="background-rg" class="background" src="{% static 'imgs/resumegravy.png' %}"></img>
       <div id="container">
         <div id="sidebar" class="flex-column">
           <div id="summary">
@@ -49,7 +50,7 @@
               <a class="nav-link" id="frameworks-link" href="#item-2">Web Frameworks</a>
               <nav class="nav nav-pills flex-column">
                 <a class="nav-link ms-2" href="#item-2-1">// Trading Alert System</a>
-                <a class="nav-link ms-2" href="#item-2-2">// EU-Pdf Portal</a>
+                <a class="nav-link ms-2" href="#item-2-2">// EU Pdf Portal</a>
               </nav>
               <a class="nav-link" href="#item-3">Data Mining</a>
               <nav class="nav nav-pills flex-column">
@@ -69,8 +70,8 @@
           <div id="content" class="rounded rightbar scroll-container" data-bs-spy="scroll" data-bs-offset="50" data-bs-target="#navvy" tabindex="0">
             <div class="section" style="margin-top: 10px;">
               <p id="Profile" class="synopsis" alt="Summary // Freelance Developer - Python+">
+                and related technologies. Specialising in computer vision, web frameworks and
                 An experienced backend developer with expert proficiency in the native Python3 libraries
-                and related technologies. specialising in computer vision, web frameworks and
                 data mining
               </p>
               <div class="main">
@@ -117,11 +118,10 @@
                   <h3 style="color: white;">Technical Notes</h3>
                   <ul>
                     <li>
-                      Extensive use of <strong>vectorization</strong> optimizes processing of
-                      high-resolution image matrices in a highly time-sensitive context
+                      <strong>Vectorization</strong> and <strong>multi-threading</strong> accelerates processing of high-resolution image matrices
                     </li>
                     <li>
-                      A <strong>bespoke registration module</strong> leverages medical imaging techniques and workflows 
+                      A <strong>bespoke registration module</strong> exploits medical imaging techniques 
                       to accurately align low-information, sparsely featured cell images
                       
                     </li>
@@ -143,7 +143,7 @@
             </div>
             <div class="section">
               <p id="item-1-2" class="synopsis" alt="Computer Vision // LIDAR Building Segmentation">
-                High-accuracy segmentation of LIDAR arrays into individual buildings. Generates visual and coordinate output from raw input data
+                High-accuracy segmentation of LIDAR arrays into individual buildings. Generates visual and coordinate building location outputs from raw input data
               </p>
               <div class="main">
                 <h3>Technical Notes</h3>
@@ -178,7 +178,7 @@
             </div>
             <div class="section">
               <p id="item-2-1" class="synopsis" alt="Computer Vision | Web Frameworks // Trading Alert System">
-                Always-on solution for monitoring key trading indicators. Captures and parses chart images for asset/exchange-specific indicators, specified through a configurable frontend</p>
+                Always-on solution for monitoring key trading metrics. Captures and parses chart images for alert criteria, specified through a configurable frontend
               <div class="main">
                 <h3>Technical Notes</h3>
                 <div class="technical">
@@ -206,11 +206,26 @@
               </div>
             </div>
             <div class="section">
-              <p id="item-2-2" class="synopsis" alt="Web Frameworks // EU-Pdf Portal">
-                Experience with a variety of different web frameworks (Django, Flask, Pyramid) building responsive
-                web applications (like this one!) alongside complex backend logic.
-              </p>
+              <p id="item-2-2" class="synopsis" alt="Data Mining | Web Frameworks // EU Pdf Portal">
+                Interface for bulk downloading Pdf search results from EU sites. Generates downloadable archives of document text content and metadata from query URL</p>
               <div class="main">
+                <h3>Technical Notes</h3>
+                <div class="technical">
+                  <ul>
+                    <li>
+                      Extracts relevant content from search hits using site-specific xpath data and a <strong>simulated Selenium browser session</strong>
+                    </li>
+                    <li>
+                      Programmatically determines result count and executes <strong>multiple fallback iterations</strong> in case of connection or runtime failures 
+                    </li>
+                    <li>
+                      Dynamic logs rendered on <strong>Jinja templated frontend</strong> for monitoring and diagnostics by the end user
+                    </li>
+                    <li>
+                      Executes <strong>serverside Pdf parsing</strong> to avoid excessive download sizes 
+                    </li>
+                  </ul>
+                </div>
                 <div class="feedback">
                   <h5>Porter Novelli</h5>
                   <div>
@@ -275,11 +290,17 @@ function hideBackgrounds () {
     document.getElementById('wrapper').style.background = "rgb(10, 5, 25, 0.85)";
     document.getElementById('navvy').style.background = "rgb(10, 5, 25, 0.85)";  
   }
-  else if (subtitle.includes('EU-Pdf')) {
+  else if (subtitle.includes('EU Pdf')) {
     document.getElementById('logo').style.background = "rgb(0, 0, 0, 0.85)";
     document.getElementById('background-eu').style.visibility = "visible";
     document.getElementById('wrapper').style.background = "rgb(10, 10, 10, 0.85)";
     document.getElementById('navvy').style.background = "rgb(10, 10, 10, 0.85)";  
+  }
+  else if (subtitle.includes('Resume Parsing')) {
+    document.getElementById('logo').style.background = "rgb(5, 30, 30, 0.85)";
+    document.getElementById('background-rg').style.visibility = "visible";
+    document.getElementById('wrapper').style.background = "rgb(5, 33, 33, 0.85)";
+    document.getElementById('navvy').style.background = "rgb(5, 33, 33, 0.85)";  
   }
   else {
     document.getElementById('wrapper').style.background = "rgb(30, 30, 30)";
