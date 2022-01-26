@@ -1,5 +1,12 @@
 from django.apps import AppConfig
+from pathlib import Path
 
-
-class DisplayConfig(AppConfig):
-    name = 'display'
+ # Dynamically create accurately labelled app
+appname = Path(__file__).parent.name
+mainconfig = type(
+    f'{appname.title()}Config',
+    (AppConfig,),
+    {
+    'name': appname
+    }
+)

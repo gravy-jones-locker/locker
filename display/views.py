@@ -1,5 +1,6 @@
 from django.shortcuts import render
+from .models import PortfolioEntry
 
-# Create your views here.
 def index(request):
-    return render(request, 'display/index.html', {})
+    context = {"entries": PortfolioEntry.objects.all()}
+    return render(request, 'display/alt_index.html', context)
