@@ -4,3 +4,4 @@ demo_*
 **/settings.py
 .pdbrc
 __pycache__
+!.gitkeep
