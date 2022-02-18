@@ -2,3 +2,5 @@ db.sqlite3
 .venv/*
 demo_*
 **/settings.py
+.pdbrc
+__pycache__
