@@ -14,7 +14,7 @@ class EntryManager(models.Manager):
 class PortfolioEntry(models.Model):
     objects = EntryManager()
     ref = models.CharField(max_length=255)
-    image = models.ImageField()
+    img = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
     synopsis = models.CharField(max_length=255)
 

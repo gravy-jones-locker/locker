@@ -1,6 +1,7 @@
 {
     "title": "Solar Cell Defect Detection",
     "section": "Computer Vision",
+    "img": "panel.jpg",
     "synopsis": "Workflow package for an ML defect detection pipeline. Manages splitting, preprocessing and recomposition of electroluminescent images from the solar panel manufacturing process",
     "notes": [
         "<strong>Vectorization</strong> and <strong>multi-threading</strong> accelerates processing of high-resolution image matrices",

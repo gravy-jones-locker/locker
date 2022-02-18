@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from genericpath import isdir
 from pathlib import Path
 import os
 
@@ -27,11 +26,15 @@ SECRET_KEY = '+sl2$e0zl1y%^z8co_l*tj8jfrh363rexq&&gqv@zm-pa(l*4y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['159.65.55.166', 'localhost','gravyjoneslocker.uk']
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
 # Application definition
-CUSTOM_APPS = [x for x in os.listdir() if os.path.isdir(x)]
+CUSTOM_APPS = [x for x in os.listdir() if os.path.isdir(x) \
+    and not x.startswith('.') and not x == 'locker']
+    
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'display.apps.DisplayConfig',
+    'display.apps.mainconfig',
 ]
 for x in CUSTOM_APPS:  # Add all demo apps
     if not x.startswith('demo'):
