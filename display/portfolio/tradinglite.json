@@ -1,0 +1,18 @@
+{
+    "title": "Trading Alert System",
+    "section": "Web Frameworks",
+    "img": "tradinglite.jpg",
+    "synopsis": "Always-on solution for monitoring key trading metrics. Captures and parses chart images for alert criteria, specified through a configurable frontend",
+    "notes": [
+        "Trading charts rendered in virtual memory using <strong>Xvfb display server</strong> with no need to maintain a physical display",
+        "Alert criteria (exchange; asset; relevant thresholds) configured through a <strong>Jinja templated dashboard</strong> and wired to backend logic using the <strong>Django web framework</strong>",
+        "Chart indicators detected using color masking in the <strong>HSV colorspace</strong> and minimum pixel thresholds",
+        "Alert notifications sent with the <strong>smtplib native Python3 library</strong> to a configurable recipient email address"
+    ],
+    "feedback": {
+        "client": "Private Client",
+        "text": "\"[Gravy] did fantastic work. I would recommend him to anyone\""
+    },
+    "color": "rgb(10, 5, 25, 0.85)",
+    "logo_color": "rgb(10, 5, 25, 0.85)"
+}

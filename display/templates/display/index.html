@@ -6,7 +6,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
         <link rel="stylesheet" href="{% static 'styles/arrow.css' %}">
         <link rel="shortcut icon" href="{% static 'imgs/favicon.ico' %}">
     </head>
@@ -24,17 +24,17 @@
               <ul id="contact">
                 <li>
                   <a href="https://github.com/gravy-jones-locker" target="_blank">
-                    <img alt="@gravy-jones-locker" class="contact-img" title="@gravy-jones-locker" src="{% static 'imgs/github.png' %}">
+                    <img alt="@gravy-jones-locker" class="contact-img" title="@gravy-jones-locker" src="{% static 'imgs/icons/github.png' %}">
                   </a>
                 </li>
                 <li>
                   <a href="https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1" target="_blank">
-                    <img alt="link to upwork profile" class="contact-img" title="Upwork Profile" src="{% static 'imgs/upwork.png' %}">
+                    <img alt="link to upwork profile" class="contact-img" title="Upwork Profile" src="{% static 'imgs/icons/upwork.png' %}">
                   </a>
                 </li>
                 <li>
                   <a href="mailto:gravy@gravyjoneslocker.uk" target="_blank">
-                    <img style="width: 39px; margin-top: -3px;" class="contact-img" alt="send email to gravy" title="gravy@gravyjoneslocker.uk" src="{% static 'imgs/email.png' %}">
+                    <img style="width: 39px; margin-top: -3px;" class="contact-img" alt="send email to gravy" title="gravy@gravyjoneslocker.uk" src="{% static 'imgs/icons/email.png' %}">
                   </a>
                 </li>
               </ul>
@@ -302,6 +302,7 @@
       <script>
 var firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
 firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
+console.log(firstScrollSpyEl);
   scrollSpy = bootstrap.ScrollSpy.getInstance(document.getElementById('content'));
   activeEl = scrollSpy._activeTarget.slice(1);
   subtitle = document.getElementById(activeEl).getAttribute('alt')

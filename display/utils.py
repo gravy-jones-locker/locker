@@ -11,7 +11,7 @@ def update_entries():
     for fname in os.listdir('display/portfolio'):
         with open(f'display/portfolio/{fname}', mode='r') as infile:
             config = json.load(infile)
-        models.PortfolioEntry.objects.reset_or_create(fname, config)
+        models.PortfolioEntry.objects.reset_or_create(fname[:-5], config)
         
 if __name__ == '__main__':
     print(sys.argv)

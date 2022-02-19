@@ -11,6 +11,8 @@
     ],
     "feedback": {
         "client": "Avalon ST",
-        "text": "[Gravy] managed to solve problems that others couldn't. Proactive, he gets what to do quickly, overall a pleasure to work with [Gravy], highly recommended."
-    }
+        "text": "\"[Gravy] managed to solve problems that others couldn't. Proactive, he gets what to do quickly, overall a pleasure to work with [Gravy], highly recommended.\""
+    },
+    "color": "rgb(35, 35, 120, 0.92)",
+    "logo_color": "rgb(30, 30, 30, 0.85)"
 }

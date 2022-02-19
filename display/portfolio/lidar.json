@@ -1,0 +1,17 @@
+{
+    "title": "LIDAR Building Segmentation",
+    "section": "Computer Vision",
+    "img": "lidar.jpeg",
+    "synopsis": "High-accuracy segmentation of LIDAR arrays into individual buildings. Generates visual and coordinate building location outputs from raw input data",
+    "notes": [
+        "Thresholding <strong>height-normalized point clouds</strong> to a given 'first-storey' value derives rough building outlines",
+        "Basic morphological operations (erosion; dilation) consolidate initial areas of interest using <strong>custom kernels for enhanced precision</strong>",
+        "An iterative process of <strong>Hierarchical Rectangular Polygon Fitting <a href=\"https://www.researchgate.net/profile/Hossein-Arefi/publication/225002968_From_LIDAR_Point_Clouds_to_3D_Building_Models/links/5819e9b208ae30a2c01c8c17/From-LIDAR-Point-Clouds-to-3D-Building-Models.pdf\">(Arefi 2009)</a></strong> extracts shapes with roughly orthogonal edges",
+        "Subsequent <strong>post-processing algorithms</strong> refine the output of HRPF to achieve the required level of accuracy and remove processing artefacts"],
+    "feedback": {
+        "text": "\"Very professional work from [Gravy], he met the specification perfectly and delivered within the set time budget with great communication throughout.\"",
+        "client": "Lend Direct"
+    },
+    "color": "rgb(40, 40, 40, 0.95)",
+    "logo_color": "rgb(30, 30, 30, 0.85)"
+}

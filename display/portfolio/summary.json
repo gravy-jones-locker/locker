@@ -1,0 +1,19 @@
+{
+    "title": "Summary",
+    "section": "Summary",
+    "img": null,
+    "synopsis": "An experienced backend developer with expert proficiency in the native Python3 libraries and related technologies. Specialising in computer vision, web frameworks and data processing",
+    "notes": [
+        "Web Frameworks: Django, Flask, SQLite, Pyramid, NGINX, Apache",
+        "Web Frontend: Bootstrap, CSS, HTML, JavaScript",
+        "RESTful API Integration: Django REST Framework, Google Ads, OAuth2, Azure AD",
+        "Computer Vision: OpenCV, Scikit-Image, SimpleITK, numpy, imutils",
+        "</br><p> This website includes contact details and links to relevant personal resources as well as a portfolio of past projects. <strong>GJ</strong></p>"
+    ],
+    "feedback": {
+        "client": "Quotes & More Info",
+        "text": "see open repository contributions and code samples <a href=\"https://github.com/gravy-jones-locker\" target=\"_blank\">here</a> /<br />see past jobs and client testimonials <a href=\"https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1\" target=\"_blank\">here</a> /<br /> email me <a href=\"mailto:gravy@gravyjoneslocker.uk\" target=\"_blank\">here</a> /"
+    },
+    "color": "rgb(30, 30, 30)",
+    "logo_color": "rgb(30, 30, 30, 0.85)"
+}
