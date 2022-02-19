@@ -15,17 +15,17 @@
                     <ul id="contact">
                     <li>
                         <a href="https://github.com/gravy-jones-locker" target="_blank">
-                        <img alt="@gravy-jones-locker" class="contact-img" title="@gravy-jones-locker" src="{% static 'imgs/icons/github.png' %}">
+                        <img alt="@gravy-jones-locker" class="contact-icon" title="@gravy-jones-locker" src="{% static 'imgs/icons/github.png' %}">
                         </a>
                     </li>
                     <li>
                         <a href="https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1" target="_blank">
-                        <img alt="link to upwork Summary" class="contact-img" title="Upwork Summary" src="{% static 'imgs/icons/upwork.png' %}">
+                        <img alt="link to upwork Summary" class="contact-icon" title="Upwork Summary" src="{% static 'imgs/icons/upwork.png' %}">
                         </a>
                     </li>
                     <li>
                         <a href="mailto:gravy@gravyjoneslocker.uk" target="_blank">
-                        <img style="width: 39px; margin-top: -3px;" class="contact-img" alt="send email to gravy" title="gravy@gravyjoneslocker.uk" src="{% static 'imgs/icons/email.png' %}">
+                        <img style="width: 39px; margin-top: -3px;" class="contact-icon" alt="send email to gravy" title="gravy@gravyjoneslocker.uk" src="{% static 'imgs/icons/email.png' %}">
                         </a>
                     </li>
                     </ul>
@@ -52,8 +52,8 @@
                     {% for section in sections %}
                     {% for entry in section.portfolioentry_set.all %}
                     <div id="subheading__{{ entry.ref }}" class="subheading">
-                        <h2 id="subheading-text">{{ entry.section.name }}</h2>
-                        <h1 id="subsubheading-text">// {{ entry.title }}</h1>
+                        <h2 class="subheading-text">{{ entry.section.name }}</h2>
+                        <h1 class="subsubheading-text">// {{ entry.title }}</h1>
                     </div>
                     {% endfor %}
                     {% endfor %}
@@ -61,15 +61,14 @@
                 <div id="content" class="rounded rightbar scroll-container" data-bs-spy="scroll" data-bs-offset="50" data-bs-target="#navvy" tabindex="0">
                     {% for section in sections %}
                     {% for entry in section.portfolioentry_set.all %}
-                    <div id="{{ entry.ref }}" class="section" style="margin-top: 10px;">
+                    <div id="{{ entry.ref }}" class="section">
                         {% if entry.ref != 'summary' %}
                         <img class="background" src="{{ baseStatic }}imgs/covers/{{ entry.img }}">
                         {% endif %}
                         <input class="color" type="hidden" value="{{ entry.color }}" />
                         <input class="logo-color" type="hidden" value="{{ entry.logo_color }}" />
                         <p class="synopsis">{{ entry.synopsis }}</p>
-                        <div class="main">
-                            <div class="technical">
+                        <div class="technical">
                             <h3>{% if entry.title == "Summary" %}Frequently Used Technologies{% else %}Technical Notes{% endif %}</h3>
                             <ul>
                                 {% for note in entry.technicalnote_set.all %}
@@ -77,8 +76,7 @@
                                 {% endfor %}
                             </ul>
                             </div>
-                            <div class="feedback"> <h5>{{ entry.feedback.client }}</h5>{{ entry.feedback.text|safe }}</div>
-                        </div>
+                        <div class="feedback"> <h5>{{ entry.feedback.client }}</h5>{{ entry.feedback.text|safe }}</div>
                     </div>
                     {% endfor %}
                     {% endfor %}

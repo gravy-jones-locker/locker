@@ -9,41 +9,75 @@
     visibility: hidden;
     z-index: -1;
 }
-
 body {
     background: rgb(5, 5, 5);
-    overflow-y: hidden;
-    overflow-x: hidden;
+    padding-top: 95;
+    overflow: hidden;
     font-size: 1.1rem;
+    font-family: georgia, sans-serif;
 }
-
 #container {
     position: relative;
-    padding: 60 0 40 105;
-    overscroll-behavior: none;
     height: 100%;
-    margin: 0 auto;
-    font-family: georgia, sans-serif;
-    transition-duration: 0.2s;
 }
-
-#content {
+#sidebar {
+    float: left;
+    height: 100%;
+    width: min(100%, 425px);
+    padding-right: 60px;
+}
+#contact-logo {
+    height: 260px;
+    width: 100%;
+}
+#logo {
+    width: 59%;
+    float: left;
+    padding-left: 2;
+}
+#contact {
+    padding-top: 2px;
     float: right;
+    bottom: 0;
+}
+#contact-logo > ul {
+    margin-top: -2;
+    list-style-type: none;
+}
+.contact-icon {
+    padding: 2 1 10 15;
+    width: 41px;
+    border-radius: .1rem;
+}
+#wrapper {
+    padding: 40 20 0 35;
+    height: 100%;
+    width: min(100%, calc(100% - 425px));
+    position:relative;
+    float: right;
+    background: rgb(30, 30, 30);
+}
+#header {
+    color:rgb(240, 240, 240);
+    height: 100px;
+}
+.subheading {
+    visibility: hidden;
+    position: absolute;
+    top: 40;
+}
+.subheading-text {
+    color:rgb(10, 230, 10);
+    font-size: 1.25rem;
+}
+.subsubheading-text {
+    font-size: 3.2rem;
+}
+#content {
     padding: 0 20 20 10;
-    height: calc(100vh - 200px);
-    position: relative;
-    min-height: 480px;
     color: rgb(240, 240, 240);
     width: 100%;
-    margin-top: 10px;
 }
-
-label {
-    align-self: baseline;
-    font-size: x-small;
-    color: white;
-}
-
 .feedback {
     position: absolute;
     right: 0;
@@ -52,137 +86,41 @@ label {
     text-align: right;
     min-height: 85px;
 }
-
 .scroll-container {
-    height: calc(100vh - 203px);
+    height: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
-
 .section {
     overflow-x: hidden;
     height: 100%;
-    padding: 0 0 0 0;
     scroll-snap-align: center;
 }
-
 a {
     color:rgb(240, 240, 240);
 }
-
 a:hover {
     color:rgb(10, 230, 10);
 }
-
-.technical a {
-    text-decoration-line: underline;
-}
-
-.section-content {
-    position: relative;
-    padding: 15 0 0 0;
-}
-
-#sidebar {
-    float: left;
-    height: 100%;
-    width: 425px;
-    margin-bottom: 5px;
-    margin-top: -5px;
-    padding-right: 60px;
-}
-
-#header {
-    color:rgb(240, 240, 240);
-    height: 100px;
-    width: 100%;
-    position:relative;
-    float: right;
-    color: rgb(240, 240, 240);
-}
-
-#logo {
-    width: 215;
-    height: 250;
-    border-top-left-radius: .25rem;
-    float: left;
-    padding-left: 2;
-    background: rgb(30, 30, 30, 0.85);
-}
-
-.main {
-    padding-bottom: 0 !important;
-    position: relative;
-    height: calc(100vh - 350px);
-}
-
-.main > * > ul {
-    padding-left: 18;
-    list-style-type: '-  ';
-}
-
 .technical > ul {
     list-style-type: ' ';
     padding-right: 100px;
     margin-left: -15px;
 }
-
 .technical > ul > li {
     margin-bottom: 15px;
 }
-
-#subheading-text {
-    color:rgb(10, 230, 10);
-    font-size: 1.25rem;
-}
-
-#subsubheading-text {
-    font-size: 3.2rem;
-}
-
-.subheading {
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-}
-
 .synopsis {
     padding: 0 0 30 0; 
     font-size: 1.26rem;
 }
-
-#contact-logo {
-    height: 260px;
-    width: 100%;
-    padding: 10 0 10 0;
-    position: relative;
-}
-
-#contact {
-    padding-top: 3px;
-    float: right;
-    bottom: 0;
-}
-
 strong {
     font-weight: normal;
     color:rgb(10, 230, 10);
 }
-
 .rightbar {
     padding-left: 10px;
-}
-
-#contact-logo > ul {
-    margin-top: -2;
-    list-style-type: none;
-}
-
-#contact > * > * > img {
-    padding: 2 1 10 15;
-    width: 41px;
-    border-radius: .1rem;
 }
 
 .bg-light {
@@ -193,17 +131,6 @@ strong {
 h1 {
     font-size: 2.5em;
     font-weight: 500;
-}
-
-#wrapper {
-    padding-top: 40;
-    height: calc(100vh - 60px);
-    width: calc(100% - 425px);
-    position:relative;
-    float: right;
-    padding-left: 35px;
-    padding-right: 20px;
-    background: rgb(30, 30, 30);
 }
 
 #navvy {
@@ -329,8 +256,3 @@ h3 {
 -ms-overflow-style: none;  /* IE and Edge */
 scrollbar-width: none;  /* Firefox */
 } 
-
-#contact-details {
-    transition-duration: 0.2s;
-    margin-top: hidden;
-}
