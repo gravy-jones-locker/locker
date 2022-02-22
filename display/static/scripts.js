@@ -65,8 +65,12 @@ function processResize() {
         sidebar.style.visibility = 'hidden';
         sidebar.style.width = 0;
         sidebar.style.margin = '0px 0px 0px 0px';
+        wrapper.style.padding = '30px 3vw 0px 3vw';
+        container.style.padding = '0 0 0 0';
     } else {
         sidebar.removeAttribute('style');
+        wrapper.removeAttribute('style');
+        container.removeAttribute('style');
     };
     if (window.innerWidth < 600) {
         for (var entry of compile) {
@@ -78,11 +82,4 @@ function processResize() {
             entry.removeAttribute('style');
         }
     }
-    if (window.innerWidth < 800) {
-        wrapper.style.padding = '30px 3vw 0px 3vw';
-        container.style.padding = '0 0 0 0';
-    } else {
-        wrapper.removeAttribute('style');
-        container.removeAttribute('style');
-    };
 };

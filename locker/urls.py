@@ -19,7 +19,7 @@ import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('site/', include('display.urls')),
+    path('', include('display.urls')),
 ] 
 for x in os.listdir():  # Add demo url configs
     if not os.path.isdir(x) or not x.startswith('demo'):

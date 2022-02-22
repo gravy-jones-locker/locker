@@ -15,7 +15,7 @@ body {
     padding-top: 95;
     overflow: hidden;
     font-size: min(1.1rem, 4.5vw);
-    font-family: georgia, sans-serif;
+    font-family: Verdana, sans-serif;
 }
 #container {
     display: flex;
