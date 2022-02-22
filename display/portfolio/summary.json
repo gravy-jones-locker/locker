@@ -12,8 +12,8 @@
     ],
     "feedback": {
         "client": "Quotes & More Info",
-        "text": "see open repository contributions and code samples <a href=\"https://github.com/gravy-jones-locker\" target=\"_blank\">here</a> /<br />see past jobs and client testimonials <a href=\"https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1\" target=\"_blank\">here</a> /<br /> email me <a href=\"mailto:gravy@gravyjoneslocker.uk\" target=\"_blank\">here</a> /"
+        "text": "<ul class=\"no-bullets\" style=\"padding-left: 0; margin-bottom: 0;\"><li class=\"compile\">see repository contributions and code samples <a href=\"https://github.com/gravy-jones-locker\" target=\"_blank\">here</a> / </li><li class=\"compile\">see past jobs and client testimonials <a href=\"https://www.upwork.com/freelancers/~01b7ea7111969c5ebb?viewMode=1\" target=\"_blank\">here</a> / </li><li class=\"compile\">email me <a href=\"mailto:gravy@gravyjoneslocker.uk\" target=\"_blank\">here</a> / </li>"
     },
     "color": "rgb(30, 30, 30)",
-    "logo_color": "rgb(30, 30, 30, 0.85)"
+    "logo_color": "rgb(30, 30, 30, 0)"
 }

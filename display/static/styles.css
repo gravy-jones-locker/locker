@@ -8,94 +8,145 @@
     min-height: calc(100vh + 15px);
     visibility: hidden;
     z-index: -1;
+    object-fit: cover;
 }
 body {
     background: rgb(5, 5, 5);
     padding-top: 95;
     overflow: hidden;
-    font-size: 1.1rem;
+    font-size: min(1.1rem, 4.5vw);
     font-family: georgia, sans-serif;
 }
 #container {
+    display: flex;
     position: relative;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 80px;
+    padding-left: 70px;
 }
 #sidebar {
     float: left;
-    height: 100%;
-    width: min(100%, 425px);
-    padding-right: 60px;
+    flex: 1 0 auto;
+    width: 360px;
+    margin-right: min(60px, 4vw);
 }
 #contact-logo {
-    height: 260px;
+    display: flex;
+    flex: 1 1 auto;
+    height: 27vh;
     width: 100%;
 }
 #logo {
-    width: 59%;
+    height: 100%;
     float: left;
-    padding-left: 2;
 }
 #contact {
     padding-top: 2px;
-    float: right;
-    bottom: 0;
+    margin-left: auto;
 }
 #contact-logo > ul {
     margin-top: -2;
     list-style-type: none;
 }
 .contact-icon {
-    padding: 2 1 10 15;
+    padding: 2px 1px 10px 15px;
     width: 41px;
     border-radius: .1rem;
 }
+#navvy {
+    height: calc(100% - 260px);
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    margin-top: 30px;
+    background: rgb(30, 30, 30);
+    font-size: 1.1rem;
+}
+.nav-link {
+    color: rgb(240, 240, 240);
+}
+.nav-link:hover {
+    color: rgb(10, 230, 10);
+}
+.navbar-brand {
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    border-bottom: solid;
+    padding-left: 3px;
+    margin-left: 13px;
+    margin-right: 3px;
+    border-radius: 0;
+}
+.navbar-light .navbar-brand {
+    color: rgb(240, 240, 240);
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color:rgb(20, 20, 20, 0);
+}
+.nav-pills a.nav-link.active {
+    color:rgb(10, 230, 10);
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color:rgb(10, 230, 10);
+    border-color: rgb(240, 240, 240);
+}
+.nav-pills .nav-link.navbar-brand {
+    background: 0 0;
+    border-bottom: solid;
+    border-color: rgb(240, 240, 240);
+    border-radius: inherit;
+}
+#navvy::-webkit-scrollbar {
+    display: none;
+  }
+
 #wrapper {
-    padding: 40 20 0 35;
+    padding: 40px 35px 0px 40px;
     height: 100%;
-    width: min(100%, calc(100% - 425px));
     position:relative;
+    flex: 1 1 auto;
     float: right;
+    display: flex;
+    flex-flow: column;
     background: rgb(30, 30, 30);
 }
 #header {
     color:rgb(240, 240, 240);
-    height: 100px;
 }
-.subheading {
-    visibility: hidden;
-    position: absolute;
-    top: 40;
-}
-.subheading-text {
+#section-header {
     color:rgb(10, 230, 10);
-    font-size: 1.25rem;
+    font-size: min(1.36rem, 6vw);
 }
-.subsubheading-text {
-    font-size: 3.2rem;
+#entry-header {
+    font-size: min(3.2rem, 10vw);
 }
 #content {
-    padding: 0 20 20 10;
+    flex: 1 1 auto;
     color: rgb(240, 240, 240);
     width: 100%;
 }
 .feedback {
-    position: absolute;
-    right: 0;
-    bottom: 5;
-    width: 600px;
+    max-width: min(700px, 100%);
     text-align: right;
-    min-height: 85px;
+    margin-left: auto;
+    margin-top: 25px;
+    padding-bottom: 35px;
 }
 .scroll-container {
-    height: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 .section {
+    margin-bottom: 100px;
     overflow-x: hidden;
     height: 100%;
     scroll-snap-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scrollbar-width: none;
 }
 a {
     color:rgb(240, 240, 240);
@@ -103,149 +154,47 @@ a {
 a:hover {
     color:rgb(10, 230, 10);
 }
+.no-bullets {
+    list-style-type: '';
+}
 .technical > ul {
     list-style-type: ' ';
-    padding-right: 100px;
-    margin-left: -15px;
+    padding-left: 12px;
+    max-width: 1000px;
 }
 .technical > ul > li {
     margin-bottom: 15px;
 }
 .synopsis {
-    padding: 0 0 30 0; 
-    font-size: 1.26rem;
+    font-size: min(1.26rem, 5vw);
 }
 strong {
     font-weight: normal;
     color:rgb(10, 230, 10);
 }
-.rightbar {
-    padding-left: 10px;
-}
-
 .bg-light {
     --bs-bg-opacity: 0.9;
     background-color: white;
 }
-
 h1 {
     font-size: 2.5em;
     font-weight: 500;
 }
-
-#navvy {
-    overflow-wrap: break-word;
-    overflow-x: hidden;
-    height: calc(100% - 245px);
-    margin-top: 30px;
-    font-size: 1.1rem;
-    background: rgb(30, 30, 30);
-}
-
 h5 {
     color:rgb(10, 230, 10);
+    font-size: min(1.3rem, 5.5vw);
 }
-
 h4 {
     color:rgb(10, 230, 10);
-    padding: 15 0 15 0;
+    padding: 15px 0 15px 0;
 }
-
 h3 {
-    padding: 20 0 20 0;
+    padding: 20px 0 15px 0;
+    font-size: min(1.3rem, 6vw);
 }
-
-.text {
-    padding-bottom: 30;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer > div > a > span {
-    float: left;
-    padding-left: 15px;
-    -webkit-transform: skew(-8deg);
-}
-
-#low-section {
-    right: 0;
-    padding-right: 40px;
-    position: fixed;
-    text-align: right;
-    z-index: 5;
-    transition-duration: 0.2s;
-}
-
-#navvy::-webkit-scrollbar {
-    display: none;
-  }
-
 .scroll-container::-webkit-scrollbar {
     display: none;
   }
-
-.code {
-    font-family: 'Courier New', Courier, monospace;
-    background: lightgray;
-    border-radius: 0.1rem;
-    border-style: none;
-    background: rgb(30, 30, 30, 0.85);
-    padding: 2 5 2 5;
-    font-size: 0.9rem;
-    position: relative;
-    margin-right: 2px;
-    top: -1px;
-}
-
-.code > * {
-    color: fuchsia;
-}
-
-.nav-link {
-    color: rgb(240, 240, 240);
-}
-
-.nav-link:hover {
-    color: rgb(10, 230, 10);
-}
-
-.navbar-brand {
-    padding-bottom: 8px;
-    margin-bottom: 12px;
-    border-bottom: solid;
-    padding-left: 3;
-    margin-left: 13px;
-    margin-right: 3px;
-    border-radius: 0;
-}
-
-.navbar-light .navbar-brand {
-    color: rgb(240, 240, 240);
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color:rgb(20, 20, 20, 0);
-}
-.nav-pills a.nav-link.active {
-    color:rgb(10, 230, 10);
-}
-
-.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
-    color:rgb(10, 230, 10);
-    border-color: rgb(240, 240, 240);
-}
-
-.nav-pills .nav-link.navbar-brand {
-    background: 0 0;
-    border-bottom: solid;
-    border-color: rgb(240, 240, 240);
-    border-radius: inherit;
-}
-
  /* Hide scrollbar for Chrome, Safari and Opera */
  #content::-webkit-scrollbar {
     display: none;
