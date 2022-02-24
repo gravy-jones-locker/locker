@@ -147,7 +147,7 @@ body {
     scroll-behavior: smooth;
 }
 .section {
-    overscroll-behavior: none;
+    overscroll-behavior: contain;
     margin-bottom: 50px;
     overflow-x: hidden;
     min-height: 100%;
