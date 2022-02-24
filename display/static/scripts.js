@@ -39,8 +39,6 @@ function processScroll(event) {
             };
             activeEntry = entry;
             setFormatting();
-            event.stopPropagation();
-            event.preventDefault();
         };
     };
     scrollTop = content.scrollTop;
@@ -58,7 +56,7 @@ function setFormatting() {
 
     sectionHeader.textContent = details[0];
     entryHeader.textContent = '// '.concat(details[1]);
-    if (deltaY > 0) {
+    if (deltaY > 0 && window.innerWidth > 1200) {
         content.scrollTop = activeEntry.offsetTop - entries[0].offsetTop;
     }
 

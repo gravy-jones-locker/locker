@@ -23,7 +23,6 @@ body {
     overflow: hidden;
     font-size: min(1.1rem, 4.5vw);
     font-family: Verdana, sans-serif;
-    overscroll-behavior: none;
 }
 #container {
     display: flex;
@@ -148,6 +147,7 @@ body {
     scroll-behavior: smooth;
 }
 .section {
+    overscroll-behavior: none;
     margin-bottom: 50px;
     overflow-x: hidden;
     min-height: 100%;
