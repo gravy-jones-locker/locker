@@ -120,6 +120,8 @@ body {
     overflow: hidden;
 }
 #header {
+    overflow: visible;
+    overscroll-behavior: contain;
     color:rgb(240, 240, 240);
 }
 #section-header {
