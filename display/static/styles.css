@@ -16,6 +16,7 @@ html {
     overflow: hidden;
 }
 body {
+    overscroll-behavior: contain;
     background: rgb(5, 5, 5);
     padding-top: 95;
     height: 100vh;
@@ -25,6 +26,7 @@ body {
     font-family: Verdana, sans-serif;
 }
 #container {
+    overscroll-behavior: contain;
     display: flex;
     position: relative;
     height: 100vh;
@@ -110,6 +112,7 @@ body {
 
 #wrapper {
     padding: 40px 35px 0px 40px;
+    overscroll-behavior: contain;
     height: 100%;
     position:relative;
     flex: 1 1 auto;
