@@ -19,6 +19,10 @@ var deltaY = 0;
 content.addEventListener('scroll', processScroll);
 window.addEventListener('resize', processResize);
 
+document.body.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+});
+
 processResize();
 
 function processScroll(event) {

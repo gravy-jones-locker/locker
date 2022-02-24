@@ -24,6 +24,7 @@ body {
     overflow: hidden;
     font-size: min(1.1rem, 4.5vw);
     font-family: Verdana, sans-serif;
+    -webkit-overflow-scrolling: touch;
 }
 #container {
     display: flex;
