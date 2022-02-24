@@ -138,9 +138,9 @@ body {
     scroll-behavior: smooth;
 }
 .section {
-    margin-bottom: 100px;
+    margin-bottom: min(50vh, 300px);
     overflow-x: hidden;
-    height: 100%;
+    min-height: 100%;
     scroll-snap-align: center;
     position: relative;
     display: flex;

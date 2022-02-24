@@ -13,6 +13,8 @@ var entries = document.getElementsByClassName('section');
 
 var activeEntry = undefined;
 var activeImg = undefined;
+var scrollTop = entries[0].offsetTop;
+var deltaY = 0;
 
 content.addEventListener('scroll', processScroll);
 window.addEventListener('resize', processResize);
@@ -21,12 +23,13 @@ processResize();
 
 function processScroll(event) {
     marginTop = entries[0].offsetTop;
+    deltaY = content.scrollTop - scrollTop;
     for (var entry of entries) {
         if (entry == activeEntry) {
             continue;
         };
-        delta_y = Math.abs(content.scrollTop - entry.offsetTop + marginTop);
-        if (delta_y < 200) {
+        distEntry = Math.abs(content.scrollTop - entry.offsetTop + marginTop);
+        if (distEntry < 400) {
             if (entry == activeEntry) {
                 return;
             };
@@ -34,6 +37,7 @@ function processScroll(event) {
             setFormatting();
         };
     };
+    scrollTop = content.scrollTop;
 };
 
 function setFormatting() {
@@ -48,8 +52,9 @@ function setFormatting() {
 
     sectionHeader.textContent = details[0];
     entryHeader.textContent = '// '.concat(details[1]);
-    console.log(activeEntry.offsetTop);
-    content.scrollTop = activeEntry.offsetTop - entries[0].offsetTop;
+    if (deltaY > 0) {
+        content.scrollTop = activeEntry.offsetTop - entries[0].offsetTop;
+    }
 
     color = activeEntry.getElementsByClassName('color')[0].getAttribute('value');
     
@@ -67,19 +72,14 @@ function processResize() {
         sidebar.style.margin = '0px 0px 0px 0px';
         wrapper.style.padding = '30px 3vw 0px 3vw';
         container.style.padding = '0 0 0 0';
-    } else {
-        sidebar.removeAttribute('style');
-        wrapper.removeAttribute('style');
-        container.removeAttribute('style');
-    };
-    if (window.innerWidth < 600) {
+        content.style.scrollSnapType = 'unset';
         for (var entry of compile) {
             entry.style.display = 'inline';
             entry.style.paddingLeft = 0;
         };
     } else {
-        for (var entry of compile) {
-            entry.removeAttribute('style');
-        }
-    }
+        sidebar.removeAttribute('style');
+        wrapper.removeAttribute('style');
+        container.removeAttribute('style');
+    };
 };
