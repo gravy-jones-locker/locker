@@ -117,6 +117,7 @@ body {
     display: flex;
     flex-flow: column;
     background: rgb(30, 30, 30);
+    overflow: hidden;
 }
 #header {
     color:rgb(240, 240, 240);
