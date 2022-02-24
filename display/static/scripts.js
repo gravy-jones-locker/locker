@@ -55,7 +55,7 @@ function setFormatting() {
     sectionHeader.textContent = details[0];
     entryHeader.textContent = '// '.concat(details[1]);
     if (deltaY > 0) {
-        content.scrollTop = activeEntry.offsetTop - entries[0].offsetTop;
+        content.scrollTop = activeEntry.offsetTop;// - entries[0].offsetTop;
     }
 
     color = activeEntry.getElementsByClassName('color')[0].getAttribute('value');
