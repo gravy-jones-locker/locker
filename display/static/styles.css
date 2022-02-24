@@ -9,7 +9,6 @@
     visibility: hidden;
     z-index: -1;
     object-fit: cover;
-    overflow: hidden;
 }
 html {
     height: 100vh;
@@ -24,7 +23,7 @@ body {
     overflow: hidden;
     font-size: min(1.1rem, 4.5vw);
     font-family: Verdana, sans-serif;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto;
 }
 #container {
     display: flex;
