@@ -138,7 +138,7 @@ body {
     scroll-behavior: smooth;
 }
 .section {
-    margin-bottom: min(50vh, 300px);
+    margin-bottom: 50px;
     overflow-x: hidden;
     min-height: 100%;
     scroll-snap-align: center;

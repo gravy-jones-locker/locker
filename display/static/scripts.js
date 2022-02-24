@@ -29,12 +29,14 @@ function processScroll(event) {
             continue;
         };
         distEntry = Math.abs(content.scrollTop - entry.offsetTop + marginTop);
-        if (distEntry < 400) {
+        if (distEntry < 100) {
             if (entry == activeEntry) {
                 return;
             };
             activeEntry = entry;
             setFormatting();
+            event.stopPropagation();
+            event.preventDefault();
         };
     };
     scrollTop = content.scrollTop;
