@@ -11,9 +11,10 @@ var compile = document.getElementsByClassName('compile');
 var container = document.getElementById('container');
 var entries = document.getElementsByClassName('section');
 
-var activeEntry = undefined;
+var activeEntry = entries[0];
+var activeEntryIndex = 0;
 var activeImg = undefined;
-var scrollTop = entries[0].offsetTop;
+var scrollTop = 0;
 var deltaY = 0;
 
 content.addEventListener('scroll', processScroll);
@@ -26,20 +27,47 @@ document.body.addEventListener('touchmove', function(event) {
 processResize();
 
 function processScroll(event) {
+    
+    // Set starting defaults
+    changedFocus = false;
     marginTop = entries[0].offsetTop;
+
+    // Work out the scroll direction
     deltaY = content.scrollTop - scrollTop;
-    for (var entry of entries) {
-        if (entry == activeEntry) {
-            continue;
+
+    if (deltaY == 0) {
+        return;
+    } 
+    if (deltaY >= 0) {
+        // If moving down the page then look for distance to next
+        refIndex = activeEntryIndex + 1;
+        if (refIndex > entries.length - 1) {
+            return;
         };
-        distEntry = Math.abs(content.scrollTop - entry.offsetTop + marginTop);
-        if (distEntry < 100) {
-            if (entry == activeEntry) {
-                return;
-            };
-            activeEntry = entry;
-            setFormatting();
+        ref = entries[refIndex];
+
+        distRefEntry = content.scrollTop - ref.offsetTop + marginTop;
+        if (distRefEntry > -100) {
+            changedFocus = true;
         };
+    } else {
+        // Otherwise look for distance to previous
+        refIndex = activeEntryIndex - 1;
+        if (refIndex < 0) {
+            return;
+        }
+        ref = entries[refIndex];
+        offsetBottom = ref.offsetTop + ref.offsetHeight;
+
+        distRefEntry = content.scrollTop - offsetBottom + marginTop;
+        if (distRefEntry < 0) {
+            changedFocus = true;
+        };
+    };
+    if (changedFocus) {
+        activeEntry = ref;
+        activeEntryIndex = refIndex;
+        setFormatting();
     };
     scrollTop = content.scrollTop;
 };
