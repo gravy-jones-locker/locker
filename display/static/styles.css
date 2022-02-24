@@ -9,6 +9,7 @@
     visibility: hidden;
     z-index: -1;
     object-fit: cover;
+    overscroll-behavior: contain;
 }
 html {
     height: 100vh;
