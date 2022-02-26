@@ -17,6 +17,7 @@ body {
     font-family: Verdana, sans-serif;
 }
 #container {
+    overscroll-behavior: none;
     display: flex;
     position: relative;
     height: 100vh;
