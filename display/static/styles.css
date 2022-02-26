@@ -9,25 +9,14 @@
     visibility: hidden;
     z-index: -1;
     object-fit: cover;
-    overscroll-behavior: contain;
-}
-html {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
 }
 body {
-    overscroll-behavior: contain;
     background: rgb(5, 5, 5);
     padding-top: 95;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
     font-size: min(1.1rem, 4.5vw);
     font-family: Verdana, sans-serif;
 }
 #container {
-    overscroll-behavior: contain;
     display: flex;
     position: relative;
     height: 100vh;
@@ -49,7 +38,7 @@ body {
     width: 100%;
 }
 #logo {
-    height: 100%;
+    width: 100%;
     float: left;
 }
 #contact {
@@ -113,19 +102,14 @@ body {
 
 #wrapper {
     padding: 40px 35px 0px 40px;
-    overscroll-behavior: contain;
-    height: 100%;
-    position:relative;
     flex: 1 1 auto;
     float: right;
     display: flex;
     flex-flow: column;
     background: rgb(30, 30, 30);
-    overflow: hidden;
 }
 #header {
     overflow: visible;
-    overscroll-behavior: contain;
     color:rgb(240, 240, 240);
 }
 #section-header {
@@ -153,7 +137,6 @@ body {
     scroll-behavior: smooth;
 }
 .section {
-    overscroll-behavior: contain;
     margin-bottom: 50px;
     overflow-x: hidden;
     min-height: 100%;
@@ -218,6 +201,19 @@ h3 {
   
 /* Hide scrollbar for IE, Edge and Firefox */
 #content {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+} 
+#container::-webkit-scrollbar {
+    display: none;
+  }
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ #container::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+#container {
 -ms-overflow-style: none;  /* IE and Edge */
 scrollbar-width: none;  /* Firefox */
 } 
