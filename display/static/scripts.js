@@ -28,10 +28,10 @@ container.addEventListener('scroll', function (event) {
     containerDeltaY = container.scrollTop - containerScrollTop;
     containerScrollTop = container.scrollTop;
 
-    if (containerDeltaY > 0 && container.scrollTop + 12 >= wrapper.offsetTop) {
+    if (containerDeltaY > 0 && containerDeltaY + container.scrollTop + 20 >= wrapper.offsetTop) {
+        container.scrollTop = wrapper.offsetTop;
         content.style.overflowY = 'scroll';
         container.style.overflowY = 'hidden';
-        container.scrollTop = wrapper.offsetTop - 12;
         content.scrollTop = 1;
     };
 });
@@ -48,8 +48,9 @@ function processScroll(event) {
     // Work out the scroll direction
     deltaY = content.scrollTop - scrollTop;
     scrollTop = content.scrollTop;
+    console.log(deltaY);
 
-    if (deltaY < 0 && activeEntryIndex == 0 && content.scrollTop <= 10) {
+    if (deltaY < 0 && deltaY + content.scrollTop <= 0 && activeEntryIndex == 0) {
         content.style.overflowY = 'hidden';
         container.style.overflowY = 'scroll';
         content.scrollTop = 0;
