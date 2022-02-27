@@ -90,9 +90,7 @@ function processScroll(event) {
         activeEntry = ref;
         activeEntryIndex = refIndex;
         setFormatting();
-        if (deltaY > 0) {
-            content.scrollTop = activeEntry.offsetTop - content.offsetTop;
-    }};
+    };
 };
 
 function setFormatting() {
