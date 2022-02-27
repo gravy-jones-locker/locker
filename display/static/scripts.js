@@ -124,6 +124,7 @@ function setFormatting() {
 };
 
 function processResize() {
+    console.log('goodbye');
     if (window.innerWidth < 1200) {
         navvy.style.visibility = 'hidden';
         navvy.style.height = 0;
