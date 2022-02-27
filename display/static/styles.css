@@ -107,6 +107,7 @@ body {
     display: flex;
     flex-flow: column;
     overflow: visible;
+    scrollbar-width: none;
     background: rgb(30, 30, 30);
 }
 #header {
