@@ -15,6 +15,7 @@ body {
     font-size: min(1.1rem, 4.5vw);
     font-family: Verdana, sans-serif;
     overscroll-behavior: none;
+    overflow: hidden;
 }
 #container {
     display: flex;
@@ -107,7 +108,7 @@ body {
     float: right;
     display: flex;
     flex-flow: column;
-    overflow: hidden;
+    overflow: visible;
     background: rgb(30, 30, 30);
 }
 #header {
