@@ -21,8 +21,8 @@ var deltaY = -1;
 
 content.addEventListener('scroll', processScroll);
 container.addEventListener('scroll', function () {
-    if (container.scrollTop + 20 >= wrapper.offsetTop) {
-            container.style.scrollTop = wrapper.offsetTop;
+    if (deltaY < 0 && container.scrollTop + 50 >= wrapper.offsetTop) {
+            container.style.scrollTop = wrapper.offsetTop - 1;
             content.style.overflowY = 'scroll';
             container.style.overflowY = 'hidden';
             content.scrollTop = 1;
@@ -133,9 +133,6 @@ function processResize() {
         for (var entry of compile) {
             entry.style.display = 'inline';
             entry.style.paddingLeft = 0;
-        };
-        for (var icon of contactLogoIcons) {
-            icon.style.width = '35px';
         };
     } else {
         sidebar.removeAttribute('style');
