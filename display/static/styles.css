@@ -14,8 +14,6 @@ body {
     background: rgb(5, 5, 5);
     font-size: min(1.1rem, 4.5vw);
     font-family: Verdana, sans-serif;
-    overscroll-behavior: none;
-    overflow: hidden;
 }
 #container {
     display: flex;
