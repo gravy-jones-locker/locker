@@ -36,6 +36,9 @@ container.addEventListener('scroll', function (event) {
         container.style.overflowY = 'hidden';
         container.scrollTop = wrapper.offsetTop;
         content.scrollTop = 1;
+        event.preventDefault();
+        event.stopPropagation();
+        console.log(content.style.overflowY);
     };
 });
 window.addEventListener('resize', processResize);
