@@ -20,7 +20,7 @@ var scrollTop = 0;
 var deltaY = 0;
 
 var containerScrollTop = 0;
-var containerDeltaY = 0;
+var containerDeltaY = 1;
 
 content.addEventListener('scroll', processScroll);
 container.addEventListener('scroll', function (event) {
