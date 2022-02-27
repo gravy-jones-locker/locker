@@ -21,13 +21,11 @@ var deltaY = -1;
 
 content.addEventListener('scroll', processScroll);
 container.addEventListener('scroll', function () {
-    if (deltaY < 0 && container.scrollTop + 20 >= wrapper.offsetTop) {
-        if (content.style.overflowY != 'scroll') {
+    if (container.scrollTop + 20 >= wrapper.offsetTop) {
             container.style.scrollTop = wrapper.offsetTop;
             content.style.overflowY = 'scroll';
             container.style.overflowY = 'hidden';
             content.scrollTop = 1;
-        };
     };
 });
 window.addEventListener('resize', processResize);
