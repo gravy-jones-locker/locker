@@ -107,6 +107,7 @@ body {
     float: right;
     display: flex;
     flex-flow: column;
+    overflow: hidden;
     background: rgb(30, 30, 30);
 }
 #header {
