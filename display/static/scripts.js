@@ -28,20 +28,14 @@ container.addEventListener('scroll', function (event) {
     containerDeltaY = container.scrollTop - containerScrollTop;
     containerScrollTop = container.scrollTop;
 
-    console.log(containerDeltaY);
-
     if (containerDeltaY > 0 && container.scrollTop + 12 >= wrapper.offsetTop) {
-        container.scrollTop = wrapper.offsetTop - 1;
         content.style.overflowY = 'scroll';
         container.style.overflowY = 'hidden';
+        container.scrollTop = wrapper.offsetTop - 12;
         content.scrollTop = 1;
     };
 });
 window.addEventListener('resize', processResize);
-
-document.body.addEventListener('touchmove', function(event) {
-    event.preventDefault();
-});
 
 processResize();
 
