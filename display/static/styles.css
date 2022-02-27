@@ -15,6 +15,7 @@ body {
     font-size: min(1.1rem, 4.5vw);
     overflow: visible;
     font-family: Verdana, sans-serif;
+    overscroll-behavior-y: none;
 }
 #container {
     display: flex;
@@ -117,10 +118,10 @@ body {
 }
 #section-header {
     color:rgb(10, 230, 10);
-    font-size: min(1.36rem, 6vw);
+    font-size: min(22px, 5vw);
 }
 #entry-header {
-    font-size: min(3.2rem, 10vw);
+    font-size: min(50px, 7.5vw);
 }
 #content {
     overscroll-behavior: none;

@@ -54,6 +54,7 @@ function processScroll(event) {
         content.style.overflowY = 'hidden';
         container.style.overflowY = 'scroll';
         content.scrollTop = 0;
+        container.scrollTop = wrapper.offsetTop - 13;
     };
 
     if (deltaY == 0) {
@@ -81,7 +82,7 @@ function processScroll(event) {
         offsetBottom = ref.offsetTop + ref.offsetHeight;
 
         distRefEntry = content.scrollTop - offsetBottom + marginTop;
-        if (distRefEntry < 0) {
+        if (distRefEntry < -100) {
             changedFocus = true;
         };
     };
@@ -89,7 +90,9 @@ function processScroll(event) {
         activeEntry = ref;
         activeEntryIndex = refIndex;
         setFormatting();
-    };
+        if (deltaY > 0) {
+            content.scrollTop = activeEntry.offsetTop - content.offsetTop;
+    }};
 };
 
 function setFormatting() {
