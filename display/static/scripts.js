@@ -28,10 +28,10 @@ container.addEventListener('scroll', function (event) {
     containerDeltaY = container.scrollTop - containerScrollTop;
     containerScrollTop = container.scrollTop;
 
-    if (containerDeltaY > 0 && container.scrollTop + containerDeltaY >= wrapper.offsetTop - 20) {
+    if (containerDeltaY > 0 && container.scrollTop + 12 >= wrapper.offsetTop) {
         content.style.overflowY = 'scroll';
         container.style.overflowY = 'hidden';
-        container.scrollTop = wrapper.offsetTop;
+        container.scrollTop = wrapper.offsetTop - 12;
         content.scrollTop = 1;
     };
 });
@@ -49,7 +49,7 @@ function processScroll(event) {
     deltaY = content.scrollTop - scrollTop;
     scrollTop = content.scrollTop;
 
-    if (deltaY < 0 && activeEntryIndex == 0 && content.scrollTop + deltaY <= 10) {
+    if (deltaY < 0 && activeEntryIndex == 0 && content.scrollTop <= 10) {
         content.style.overflowY = 'hidden';
         container.style.overflowY = 'scroll';
         content.scrollTop = 0;
