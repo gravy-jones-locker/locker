@@ -17,16 +17,17 @@ var activeEntry = entries[0];
 var activeEntryIndex = 0;
 var activeImg = undefined;
 var scrollTop = 0;
-var deltaY = 0;
+var deltaY = -1;
 
 content.addEventListener('scroll', processScroll);
 container.addEventListener('scroll', function () {
-    if (container.scrollTop + 20 >= wrapper.offsetTop) {
+    if (deltaY < 0 && container.scrollTop + 20 >= wrapper.offsetTop) {
         if (content.style.overflowY != 'scroll') {
+            container.style.scrollTop = wrapper.offsetTop;
             content.style.overflowY = 'scroll';
             container.style.overflowY = 'hidden';
+            content.scrollTop = 1;
         };
-    } else if (content.style.overflowY != 'hidden') {
     };
 });
 window.addEventListener('resize', processResize);
@@ -39,15 +40,15 @@ processResize();
 
 function processScroll(event) {
 
-
     // Set starting defaults
     changedFocus = false;
     marginTop = entries[0].offsetTop;
 
     // Work out the scroll direction
     deltaY = content.scrollTop - scrollTop;
+    scrollTop = content.scrollTop;
 
-    if (deltaY < 0 && activeEntryIndex == 0 && content.scrollTop < 10) {
+    if (deltaY < 0 && activeEntryIndex == 0 && content.scrollTop == 0) {
         content.style.overflowY = 'hidden';
         container.style.overflowY = 'scroll';
     };
@@ -86,7 +87,6 @@ function processScroll(event) {
         activeEntryIndex = refIndex;
         setFormatting();
     };
-    scrollTop = content.scrollTop;
 };
 
 function setFormatting() {
@@ -120,25 +120,24 @@ function processResize() {
         navvy.style.height = 0;
         navvy.style.margin = 0;
         navvy.style.padding = 0;
-        wrapper.style.padding = '30px 3vw 0px 3vw';
+        wrapper.style.padding = '20px 3vw 0px 3vw';
         container.style.flexDirection = 'column';
         container.style.padding = '10px 10px 0px 10px';
         container.style.overflowY = 'scroll';
         content.style.scrollSnapType = 'unset';
-        contactLogo.style.height = 'unset';
         sidebar.style.width = '100%';
         sidebar.style.margin = '0';
         contact.style.width = '20%';
         contact.style.paddingLeft = '1.45rem';
         wrapper.style.height = 'calc(100vh - 10px)';
         content.style.overflowY = 'hidden';
+        logo.style.width = '80%';
         for (var entry of compile) {
             entry.style.display = 'inline';
             entry.style.paddingLeft = 0;
         };
         for (var icon of contactLogoIcons) {
             icon.style.width = '35px';
-            icon.style.padding = '2px 5px 18px 0';
         };
     } else {
         sidebar.removeAttribute('style');

@@ -12,7 +12,6 @@
 }
 body {
     background: rgb(5, 5, 5);
-    padding-top: 95;
     font-size: min(1.1rem, 4.5vw);
     font-family: Verdana, sans-serif;
     overscroll-behavior: none;
@@ -35,25 +34,26 @@ body {
 #contact-logo {
     display: flex;
     flex: 1 1 auto;
-    height: 27vh;
     width: 100%;
 }
 #logo {
-    width: 100%;
+    width: 60%;
     float: left;
 }
 #contact {
+    margin-left:auto;
     padding-top: 2px;
-    margin-left: auto;
+    width: 20%;
 }
 #contact-logo > ul {
     margin-top: -2;
     list-style-type: none;
 }
 .contact-icon {
-    padding: 2px 1px 10px 15px;
-    width: 41px;
+    padding: 2% 5% 35% 0;
+    width: 30px;
     border-radius: .1rem;
+    float: right;
 }
 #navvy {
     height: calc(100% - 260px);
