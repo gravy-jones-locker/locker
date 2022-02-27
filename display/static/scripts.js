@@ -21,15 +21,19 @@ var deltaY = 0;
 
 content.addEventListener('scroll', processScroll);
 container.addEventListener('scroll', function () {
-    if (container.scrollTop + 20 >= wrapper.offsetTop && content.scrollTop <= 10) {
+    if (container.scrollTop + 20 >= wrapper.offsetTop) {
         if (content.style.overflowY != 'scroll') {
             content.style.overflowY = 'scroll';
             container.style.overflowY = 'hidden';
-            container.scrollTop = container.offsetHeight;
         };
-    }
+    } else if (content.style.overflowY != 'hidden') {
+    };
 });
 window.addEventListener('resize', processResize);
+
+document.body.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+});
 
 processResize();
 
@@ -43,8 +47,7 @@ function processScroll(event) {
     // Work out the scroll direction
     deltaY = content.scrollTop - scrollTop;
 
-    if (deltaY <= 0 && activeEntryIndex == 0 && content.scrollTop <= 10) {
-        content.scrollTop = 0;
+    if (deltaY < 0 && activeEntryIndex == 0 && content.scrollTop < 10) {
         content.style.overflowY = 'hidden';
         container.style.overflowY = 'scroll';
     };
