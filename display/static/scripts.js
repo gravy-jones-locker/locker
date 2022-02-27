@@ -18,6 +18,7 @@ var activeEntryIndex = 0;
 var activeImg = undefined;
 var scrollTop = 0;
 var deltaY = 0;
+var windowWidth = 0;
 
 var containerScrollTop = 0;
 var containerDeltaY = 0;
@@ -27,18 +28,12 @@ container.addEventListener('scroll', function (event) {
 
     containerDeltaY = container.scrollTop - containerScrollTop;
     containerScrollTop = container.scrollTop;
-    console.log(containerDeltaY);
-    console.log(container.scrollTop);
-    console.log(wrapper.offsetTop);
 
     if (containerDeltaY > 0 && container.scrollTop + 50 >= wrapper.offsetTop) {
         content.style.overflowY = 'scroll';
         container.style.overflowY = 'hidden';
         container.scrollTop = wrapper.offsetTop;
         content.scrollTop = 1;
-        event.preventDefault();
-        event.stopPropagation();
-        console.log(content.style.overflowY);
     };
 });
 window.addEventListener('resize', processResize);
@@ -124,7 +119,9 @@ function setFormatting() {
 };
 
 function processResize() {
-    console.log('goodbye');
+    if (window.innerWidth == windowWidth) {
+        return;
+    };
     if (window.innerWidth < 1200) {
         navvy.style.visibility = 'hidden';
         navvy.style.height = 0;
@@ -151,4 +148,5 @@ function processResize() {
         wrapper.removeAttribute('style');
         container.removeAttribute('style');
     };
+    windowWidth = window.innerWidth;
 };
