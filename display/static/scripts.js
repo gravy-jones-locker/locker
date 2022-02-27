@@ -27,13 +27,11 @@ container.addEventListener('scroll', function (event) {
 
     containerDeltaY = container.scrollTop - containerScrollTop;
     containerScrollTop = container.scrollTop;
-    console.log(containerDeltaY);
-    console.log(container.scrollTop);
-    console.log(wrapper.offsetTop);
 
     if (containerDeltaY > 0 && container.scrollTop + 50 >= wrapper.offsetTop) {
         content.style.overflowY = 'scroll';
         container.style.overflowY = 'hidden';
+        container.scrollTop = wrapper.offsetTop;
         content.scrollTop = 1;
     };
 });
