@@ -30,10 +30,11 @@ container.addEventListener('scroll', function (event) {
 
     console.log(containerDeltaY);
 
-    if (containerDeltaY > 0 && container.scrollTop + 20 >= wrapper.offsetTop) {
+    if (containerDeltaY > 0 && container.scrollTop + 12 >= wrapper.offsetTop) {
         container.scrollTop = wrapper.offsetTop - 1;
         content.style.overflowY = 'scroll';
         container.style.overflowY = 'hidden';
+        content.scrollTop = 1;
     };
 });
 window.addEventListener('resize', processResize);
@@ -54,10 +55,10 @@ function processScroll(event) {
     deltaY = content.scrollTop - scrollTop;
     scrollTop = content.scrollTop;
 
-    if (deltaY < 0 && activeEntryIndex == 0 && content.scrollTop <= 20 && content.scrollTop > 5) {
-        content.scrollTop = 0;
+    if (deltaY < 0 && activeEntryIndex == 0 && content.scrollTop <= 10) {
         content.style.overflowY = 'hidden';
         container.style.overflowY = 'scroll';
+        content.scrollTop = 0;
     };
 
     if (deltaY == 0) {
