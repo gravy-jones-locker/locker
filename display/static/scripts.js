@@ -56,6 +56,7 @@ function processScroll(event) {
     scrollTop = content.scrollTop;
 
     if (deltaY < 0 && activeEntryIndex == 0 && content.scrollTop <= 10) {
+        console.log('hello');
         content.style.overflowY = 'hidden';
         container.style.overflowY = 'scroll';
         content.scrollTop = 0;
