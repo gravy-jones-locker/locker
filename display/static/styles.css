@@ -164,10 +164,12 @@ a:hover {
 .no-bullets {
     list-style-type: '';
 }
+.technical {
+    padding-right: min(100px, 10vw);
+}
 .technical > ul {
     list-style-type: ' ';
     padding-left: 12px;
-    padding-right: min(100px, 10vw);
 }
 .technical > ul > li {
     margin-bottom: 15px;
@@ -265,4 +267,7 @@ scrollbar-width: none;  /* Firefox */
 }
 #contact-logo.mobile {
     margin-bottom: 10px;
+}
+.technical.mobile {
+    padding-right: 0;
 }
