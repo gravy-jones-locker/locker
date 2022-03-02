@@ -116,6 +116,7 @@ body {
 #header {
     overflow: visible;
     color:rgb(240, 240, 240);
+    margin-bottom: 5px;
 }
 #section-header {
     color:rgb(10, 230, 10);
