@@ -35,7 +35,7 @@
             </div>
             <nav id="navvy" class="navbar navbar-light flex-column align-items-stretch adaptive">
                 <nav class="nav nav-pills flex-column">
-                    <a class="navbar-brand nav-link" href="#summary">Freelance Developer - Python+</a>
+                    <a class="navbar-brand nav-link" href="#summary">Summary</a>
                     <span class="navbar-brand inactive">Portfolio</span>
                     {% for section in sections %}
                     {% if section.name != "Summary" %}
@@ -58,7 +58,7 @@
             <div id="content" class="scroll-container adaptive" data-bs-spy="scroll" data-bs-offset="0" data-bs-target="#navvy">
                 {% for section in sections %}
                 {% for entry in section.portfolioentry_set.all %}
-                <div id="{{ entry.ref }}" class="section" alt="{{ section.name }} // {{ entry.title }}">
+                <div id="{{ entry.ref }}" class="section" alt="{{ section.name }} // {% if section.name == 'Summary' %}Freelance Developer - Python+{% else %}{{ entry.title }}{% endif %}">
                     {% if entry.ref != 'summary' %}
                     <img class="background" src="{{ baseStatic }}imgs/covers/{{ entry.img }}">
                     {% endif %}
