@@ -166,7 +166,7 @@ a:hover {
 .technical > ul {
     list-style-type: ' ';
     padding-left: 12px;
-    max-width: 1000px;
+    padding-right: min(100px, 10vw);
 }
 .technical > ul > li {
     margin-bottom: 15px;
