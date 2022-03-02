@@ -112,6 +112,9 @@ function checkEntryFocus(deltaY) {
         activeEntry = ref;
         activeEntryIndex = refIndex;
         setFormatting();  // Use the updated 'active' variables to change the formatting
+        if (window.innerWidth > mobileWidth) {
+            content.scrollTop = activeEntry.offsetTop;
+        };
     };
 };
 
