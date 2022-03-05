@@ -13,6 +13,6 @@
         "client": "Rezi",
         "text": ""
     },
-    "color": "rgb(0, 30, 30, 0.9)",
-    "logo_color": "rgb(0, 30, 30, 0.4)"
+    "color": "rgb(0, 10, 20, 0.9)",
+    "logo_color": "rgb(0, 10, 20, 0.4)"
 }

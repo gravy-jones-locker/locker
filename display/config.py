@@ -1,5 +1,6 @@
 SECTIONS = [
     'Summary',
     'Computer Vision',
-    'Web Frameworks'
+    'Web Frameworks',
+    'Data Extraction'
 ]  # Determines section order
