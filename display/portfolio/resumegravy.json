@@ -1,0 +1,18 @@
+{
+    "title": "Resume Parsing",
+    "section": "Data Extraction",
+    "img": "resumegravy.png",
+    "synopsis": "Package for extracting structured data from candidate resume Pdfs. Converts floating character encodings to labelled field/value pairs. Currently live at Rezi.ai (Seoul)",
+    "notes": [
+        "Leverages spatial, formatting and semantic information to detect field types and build into <strong>structured JSON payload</strong>",
+        "Optimisation submodule implements <strong>recursive learning</strong> for continuous improvement while minimising development time",
+        "<strong>Input agnostic</strong> structure ensures workability for a broad range of resume formats",
+        "Built for <strong>lightweight deployment</strong> on a microservices framework like GCP/AWS Lambda"
+    ],
+    "feedback": {
+        "client": "Rezi",
+        "text": ""
+    },
+    "color": "rgb(0, 30, 30, 0.9)",
+    "logo_color": "rgb(0, 30, 30, 0.4)"
+}

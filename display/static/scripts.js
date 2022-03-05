@@ -19,6 +19,7 @@ var activeImg = undefined;
 var contentScrollTop = 0;
 var containerScrollTop = 0;
 
+var clicking = false;
 
 function processContainerScroll() {
 
@@ -52,6 +53,9 @@ function processContentScroll() {
     deltaY = content.scrollTop - contentScrollTop;
     contentScrollTop = content.scrollTop;
 
+    if (clicking) {
+        return;
+    };
     if (windowWidth < mobileWidth) {
         checkContentScrollFocus(deltaY);
     };
@@ -104,7 +108,7 @@ function checkEntryFocus(deltaY) {
             offsetBottom = ref.offsetTop + ref.offsetHeight;
 
             distRefEntry = content.scrollTop - offsetBottom + marginTop;
-            if (distRefEntry < -200) {
+            if (distRefEntry < -window.innerHeight * 2 / 3) {
                 changedFocus = true;
             };
     }};
@@ -112,9 +116,6 @@ function checkEntryFocus(deltaY) {
         activeEntry = ref;
         activeEntryIndex = refIndex;
         setFormatting();  // Use the updated 'active' variables to change the formatting
-        if (window.innerWidth > mobileWidth) {
-            content.scrollTop = activeEntry.offsetTop;
-        };
     };
 };
 
@@ -129,6 +130,20 @@ function setFormatting() {
         activeImg.style.visibility = 'visible';
     };
 
+    for (var link of links) {
+        link.classList.remove('active');
+        href = link.getAttribute('href');
+        if (href == null) {
+            section = link;
+            continue;
+        };
+        id = href.slice(1)
+        if (id == activeEntry.id) {
+            link.classList.add('active');
+            section.classList.add('active');
+        };
+    };
+
     // Use the data encoded in the entry 'alt' attribute to set the header
     details = activeEntry.getAttribute('alt').split(' // ');
     sectionHeader.textContent = details[0];
@@ -141,6 +156,11 @@ function setFormatting() {
 
     logoColor = activeEntry.getElementsByClassName('logo-color')[0].getAttribute('value');
     logo.style.background = logoColor;
+
+    if (window.innerWidth > mobileWidth) {
+        content.scrollTop = activeEntry.offsetTop;
+    };
+
 };
 
 function processResize() {
@@ -150,20 +170,28 @@ function processResize() {
                 elem.classList.add('mobile');
             } else {
                 elem.classList.remove('mobile');
+                container.scrollTop = 0;
             };
         };
-        content.setAttribute('data-bs-offset', activeEntry.offsetHeight);
         windowWidth = window.innerWidth;
     };
 };
 
 function processLinkClick(event) {
+    clicking = true;
     event.preventDefault();
     id = event.target.getAttribute('href').slice(1);
+    index = 0;
     for (var entry of entries) {
+        index += 1;
         if (entry.getAttribute('id') == id) {
             content.scrollTop = entry.offsetTop;
+            activeEntry = entry;
+            activeEntryIndex = index;
+            setFormatting();
+            break;
         };
+    clicking = false;
     };
 };
 
