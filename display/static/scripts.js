@@ -191,8 +191,8 @@ function processLinkClick(event) {
             setFormatting();
             break;
         };
-    clicking = false;
     };
+    clicking = false;
 };
 
 // Check to see if a resized window needs to be made to fit mobile
