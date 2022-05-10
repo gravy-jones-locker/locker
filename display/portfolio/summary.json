@@ -4,7 +4,7 @@
     "img": null,
     "synopsis": "An experienced backend developer with expert proficiency in the native Python3 libraries and related technologies. Specialising in computer vision, web frameworks and data processing",
     "notes": [
-        "Web Frameworks: Django, Flask, SQLite, Pyramid, NGINX, Apache",
+        "Web Frameworks: Django, Flask, Pyramid",
         "Web Frontend: Bootstrap, CSS, HTML, JavaScript",
         "RESTful API Integration: Django REST Framework, Google Ads, OAuth2, Azure AD",
         "Computer Vision: OpenCV, Scikit-Image, SimpleITK, numpy, imutils",
